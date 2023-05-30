@@ -1,2 +1,2 @@
 # UncleEds
-Repository for the Uncle Ed's website project resources. 
+Repository for the Uncle Ed's web project. 
