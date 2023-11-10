@@ -1,0 +1,27 @@
+/*
+Color scheme:
+#FF5E00
+#332929
+#FFA200
+#DC4B00
+
+font-family: 'Coustard', serif;
+400-Regular
+900-Black
+
+font-family: 'Poppins', sans-serif;
+200-ExtraLight
+400-Regular
+500-Medium
+600-SemiBold
+700-Bold
+800-ExtraBold
+900-Black
+
+ */
+
+footer ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
