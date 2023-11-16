@@ -22,8 +22,12 @@ font-family: 'Poppins', sans-serif;
 *{
     font-family: 'Poppins', sans-serif;
 }
-html{
-    height: 240%;
+h5{
+    color:#FF5E00;
+    font-size: 16px;
+}
+h6{
+    font-size: 14px;
 }
 body{
     margin: 0;
@@ -53,7 +57,7 @@ header{
     height: 30px;
     position: fixed;
     top: 0;
-    background-color: blue;
+    background-color: #574f4d;
     margin: 0;
     padding: 0;
 }
@@ -61,6 +65,13 @@ header{
 /*Upcoming Events bar (orange)*/
 .notifications{
     text-align: center;
+    z-index: 9;
+}
+.n-button, .n-button *{
+    z-index: 9;
+}
+.n-b-dropdown, .n-b-dropdown *{
+    z-index: 3;
 }
 .n-b-dropbtn{
     background-color: rgba(0,0,0,0);
@@ -68,6 +79,9 @@ header{
     border: none;
     color: white;
     letter-spacing: 1px;
+}
+.n-b-dropbtn:hover{
+    cursor: pointer;
 }
 #n-b-drpbtn-dropIcon{
     margin-top: 0;
@@ -81,7 +95,8 @@ header{
     position: absolute;
     margin-top: 5px;
     float: none;
-    background-color: #004058;
+    background-color: white;
+    box-shadow: 2px 2px 5px 0 #574f4d;
     padding: 12px 30px;
     text-decoration: none;
     text-align: left;
@@ -90,13 +105,19 @@ header{
     justify-content: center;
 
 }
+.n-b-dropdown *{
+    visibility: inherit;
+    transition: inherit;
+    transition-timing-function: inherit;
+}
+
 .n-b-db-flex{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     max-width: 1280px;
     max-height: 200px;
-    background-color: aliceblue;
+    background-color: white;
     justify-content: center;
     gap: 5vw;
     margin: 0 100px 0 40px;
@@ -104,28 +125,60 @@ header{
 }
 .n-b-db-content{
     min-width:25vw;
-    background-color: #332929;
+    background-color: white;
 }
 .n-b-db-content h5, h6, p, a{
     padding: 0;
     margin: 0;
     text-align: center;
 }
+.n-b-db-content p{
+    text-align:left;
+    width: 25vw;
+    height: 100px;
+    position: absolute;
+    bottom: 50px;
+}
+.n-b-db-content h5, h6{
+    width: 25vw;
+    position: absolute;
+}
+.n-b-db-content h5{
+    text-align:center;
+    bottom: 180px;
+}
+.n-b-db-content h6{
+    text-align:left;
+    bottom: 155px;
+}
 .flex-btns{
     margin-top: 10px;
     display: flex;
     flex-direction: row;
     width: 100%;
+    bottom: 20px;
+    position: absolute;
+    color: #FF5E00;
+}
+.n-b-db-content-btn{
+    text-decoration: none;
+    color: #FF5E00;
+}
+.n-b-db-content-btn:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.n-b-db-content-btn:visited{
+    text-decoration: none;
+    color: #FF5E00;
 }
 #n-b-db-fair{
-    width: 40%;
     text-align: left;
-
+    width: 10%;
 }
 #n-b-db-more{
     text-align: right;
-    background-color: white;
-    width: 60%;
+    width: 15%;
 }
 
 /*local navigation bar (brown)*/
