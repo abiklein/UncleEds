@@ -1,0 +1,106 @@
+/*
+ Color scheme:
+ #FF5E00
+ #332929
+ #FFA200
+ #DC4B00
+ #1B1616 Dark Brown
+
+ font-family: 'Coustard', serif;
+ 400-Regular
+ 900-Black
+
+ font-family: 'Poppins', sans-serif;
+ 200-ExtraLight
+ 400-Regular
+ 500-Medium
+ 600-SemiBold
+ 700-Bold
+ 800-ExtraBold
+ 900-Black
+
+h1{
+    font-size: 22px;
+    font-family: 'Coustard', serif;
+    color: #1B1616;
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+    1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
+h2{
+    color: #FF5E00;
+    font-weight: 700;
+    font-size: 30px;
+}
+h3{
+    letter-spacing: 2px;
+    color: #FF5E00;
+}
+h4{
+    //////
+}
+h5{
+    color:#FF5E00;
+    font-size: 16px;
+}
+h6{
+    font-size: 14px;
+}
+
+break-points:
+Small	| up to 640px	| 20" to 65" | TVs	                     |  320x569, 360x640, 480x854
+Medium	| 641 - 1007px	| 7" to 12"	 | Tablets                   |	960x540
+Large	| 1008px and up	| 13" and up | PCs, Laptops, Surface Hub |	1024x640, 1366x768, 1920x1080
+Source: https://learn.microsoft.com/en-us/windows/apps/design/layout/screen-sizes-and-breakpoints-for-responsive-design
+  */
+main{
+    margin-top: 90px;
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+    background-image: url("../media/history/h-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    font-size: 22px;
+    font-family: 'Coustard', serif;
+    color: #1B1616;
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+    1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
+p{
+    text-align: left !important;
+    font-size: 12px;
+    padding-bottom: 20px !important;
+    line-height: 20px;
+}
+
+.history{
+    margin: 0 70px;
+    top: 90px;
+}
+
+/*About section*/
+.about-us, .birth{
+    margin-top:40px;
+    display: flex;
+    flex-direction: row;
+}
+.a-u-txt{
+    margin-right: 50px;
+    width: 50%;
+}
+
+/*Birth of Sauce section*/
+.b-txt{
+    margin-left: 50px;
+}
+.b-cont{
+    margin-top: 20px;
+}
+
+/*Wonder section*/
+.wonder{
+    margin-bottom: 50px;
+}

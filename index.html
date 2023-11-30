@@ -32,41 +32,28 @@
     <a></a>
     <nav class="mastnav">
         <div class="master-navbar">
-            <nav class="brands">
-                <ul class="brand-tabs">
-                    <li class="ue-bbq">
-                        <div>
-                            <a>
-                                <div>
-                                    <!--either img or svg tag, preferrably svg-->
-                                </div>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="ue-water">
-                        <div>
-                            <a>
-                                <div>
-                                    <!--either img or svg tag, preferrably svg-->
-                                </div>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
+            <a class="master-links" href="index.html">
+                <div class="m-l-container">
+                <img src="media/nav/master-bbq.png" alt="Uncle Ed's BBQ Grill Direct Image">
+                </div>
+            </a>
+            <a class="master-links" id="watercraft" href="#">
+                <div class="m-l-container">
+                    <img src="media/nav/master-boat.png" alt="Uncle Ed's Boats Direct Image">
+                </div>
+            </a>
         </div>
     </nav>
     <nav class="localnav" id="scrollnav">
         <div class="notifications">
             <div class="n-button">
                 <button class="n-b-dropbtn" onclick="notiBtn()">
-                    Upcoming Events <img class="n-b-drpbtn-dropIcon" id="n-b-drpbtn-dropIcon" src="media/drop_icon.png"
+                    Upcoming Events <img class="n-b-drpbtn-dropIcon" id="n-b-drpbtn-dropIcon" src="media/nav/drop_icon.png"
                                  alt="drop down icon" />
                     <script>
                         function notiBtn(){
-                            if(document.getElementById("n-b-dropdown").style.visibility === "hidden"){
-                                document.getElementById("n-b-dropdown").style.visibility = "visible";
-                                document.getElementById("n-b-dropdown").style.height = "200px";
+                            if(document.getElementById("n-b-dropdown").style.height === "0px"){
+                                document.getElementById("n-b-dropdown").style.height = "300px";
                                 document.getElementById("n-b-dropdown").style.transition = "height 0.5s";
                                 document.getElementById("n-b-dropdown").style.transitionTimingFunction = "ease-in-out";
 
@@ -83,9 +70,7 @@
 
                                 document.getElementById("n-b-drpbtn-dropIcon").style.rotate = "0deg";
                                 document.getElementById("n-b-drpbtn-dropIcon").style.transition = "0.5s";
-                                if(document.getElementById("n-b-dropdown").style.height === "0px"){
-                                    document.getElementById("n-b-dropdown").style.visibility = "hidden";
-                                }
+
                             }
                         }
                     </script>
@@ -163,7 +148,7 @@
                         <div role="menuitem" class="lnav-r-item">
                             <a class="lnav-r-link" href="cart.html" >
                                 <div>
-                                    <!--either img or svg tag, preferrably svg-->
+                                    <img src="media/nav/cart.png" alt="cart icon" onmouseout="this.src= 'media/nav/cart.png';" onmouseover="this.src= 'media/nav/cart-active.png';" >
                                 </div>
                             </a>
                         </div>
@@ -199,16 +184,14 @@
             let currentScrollPos = window.scrollY;
             if (prevScrollpos < currentScrollPos) {
                 document.getElementById("scrollnav").style.top = "0";
-                if(document.getElementById("n-b-dropdown").style.visibility === "visible"){
+                if(document.getElementById("n-b-dropdown").style.height === "300px"){
                     document.getElementById("n-b-dropdown").style.height = "0px";
                     document.getElementById("n-b-dropdown").style.transition = "height 0.5s";
                     document.getElementById("n-b-dropdown").style.transitionTimingFunction = "ease-in-out";
 
                     document.getElementById("n-b-drpbtn-dropIcon").style.rotate = "0deg";
                     document.getElementById("n-b-drpbtn-dropIcon").style.transition = "0.5s";
-                    if(document.getElementById("n-b-dropdown").style.height === "0px"){
-                        document.getElementById("n-b-dropdown").style.visibility = "hidden";
-                    }                }
+                          }
             } else if (currentScrollPos < 5){
                 document.getElementById("scrollnav").style.top = "30px";
             }
@@ -218,6 +201,7 @@
 </header>
 <main class="main-content">
     <div class="desktop">
+        <div class="l-spacer"></div>
         <div class="d-landing">
 
         </div>
@@ -225,32 +209,36 @@
             <div class="d-sect-sinfo">
                 <div class="d-sect-sinfo-txt">
                     <p>
-                        GLUTEN FREE<br/>
-                        LOW SUGAR<br/>
-                        LOW CARBS
+                        <span class="light">GLUTEN FREE</span><br/>
+                       LOW SUGAR<br/>
+                            <span class="bold">LOW CARBS</span>
                     </p>
                     <h1>Made With Love</h1>
                     <small>and, y'know, natural ingredients too</small>
+                    <a href="sauce.html"><button class="btn-bod" id="btn-sinfo">SAUCE INFO</button></a>
                 </div>
-                <button class="btn-bod" id="btn-sinfo">SAUCE INFO</button>
+
             </div>
-            <div class="d-sect-ingredpicture"></div>
-            <div class="d-sect-recipes">
-                <div class="d-sect-sinfo-txt">
-                    <h1>Great With Everything</h1>
-                    <pre>
+            <div class="d-sect-ingredpicture">
+                <img src="media/index/spices.png" alt="picture background featuring spices">
+                <div class="d-sect-recipes">
+
+                        <h1>Great With Everything</h1>
+                        <p>
                         unlimited possibilities,
                         simple wholesome recipes
                         anybody can make;
                         from dips to dressings,
                         marinade to barbeque
                         and everything in between.
-                    </pre>
+                    </p>
+
+                    <a href="recipes.html"><button class="btn-bod" id="btn-recipes">SEE RECIPES</button></a>
                 </div>
-                <button class="btn-bod" id="btn-recipes">SEE RECIPES</button>
             </div>
-            <div class="d-sect-recipepicture"></div>
+            <div class="d-sect-recipepicture"> <img id="recipe-img" src="media/index/recipe.png" alt="barbeque chicken"></div>
         </div>
+        <div class="r-spacer"></div>
     </div>
     <div class="mobile">
         <div class="m-landing">
@@ -265,7 +253,7 @@
                 <div>
                     <a href="index.html">
                         <div>
-                            <svg></svg><!--either img or svg tag, preferrably svg-->
+                            <img id="foot-img" src="media/footer/logo.png" alt="Uncle Ed's BBQ Grill Logo">
                         </div>
                     </a>
                 </div>

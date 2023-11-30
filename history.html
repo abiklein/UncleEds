@@ -1,10 +1,364 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" id="viewport-settings" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta name="title" content="Uncle Ed's BBQ Grill">
+    <meta property="og:title" content="Uncle Ed's BBQ Grill">
+    <meta name="description" content="The BBQ with the sweetest taste and lowest content of sugar. Only from Uncle Ed's.">
+
+    <title>Uncle Ed's BBQ Grill</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/history.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!--Fonts-->
+    <!--COUSTARD-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coustard:wght@400;900&display=swap" rel="stylesheet">
+    <!--POPPINS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 </head>
 <body>
+<header>
+    <a></a>
+    <nav class="mastnav">
+        <div class="master-navbar">
+            <a class="master-links" href="index.html">
+                <div class="m-l-container">
+                    <img src="media/nav/master-bbq.png" alt="Uncle Ed's BBQ Grill Direct Image">
+                </div>
+            </a>
+            <a class="master-links" id="watercraft" href="#">
+                <div class="m-l-container">
+                    <img src="media/nav/master-boat.png" alt="Uncle Ed's Boats Direct Image">
+                </div>
+            </a>
+        </div>
+    </nav>
+    <nav class="localnav" id="scrollnav">
+        <div class="notifications">
+            <div class="n-button">
+                <button class="n-b-dropbtn" onclick="notiBtn()">
+                    Upcoming Events <img class="n-b-drpbtn-dropIcon" id="n-b-drpbtn-dropIcon" src="media/nav/drop_icon.png"
+                                         alt="drop down icon" />
+                    <script>
+                        function notiBtn(){
+                            if(document.getElementById("n-b-dropdown").style.height === "0px"){
+                                document.getElementById("n-b-dropdown").style.height = "300px";
+                                document.getElementById("n-b-dropdown").style.transition = "height 0.5s";
+                                document.getElementById("n-b-dropdown").style.transitionTimingFunction = "ease-in-out";
 
+
+                                document.getElementById("n-b-drpbtn-dropIcon").style.rotate = "180deg";
+                                document.getElementById("n-b-drpbtn-dropIcon").style.transition = "0.5s";
+
+
+                            }
+                            else{
+                                document.getElementById("n-b-dropdown").style.height = "0px";
+                                document.getElementById("n-b-dropdown").style.transition = "height 0.5s";
+                                document.getElementById("n-b-dropdown").style.transitionTimingFunction = "ease-in-out";
+
+                                document.getElementById("n-b-drpbtn-dropIcon").style.rotate = "0deg";
+                                document.getElementById("n-b-drpbtn-dropIcon").style.transition = "0.5s";
+
+                            }
+                        }
+                    </script>
+                </button>
+            </div>
+            <div class="n-b-dropdown" id="n-b-dropdown">
+                <div class="n-b-db-flex">
+                    <div class="n-b-db-content">
+                        <h5>BOAT RENTALS</h5>
+                        <h6>ONGOING FROM SPRING TO FALL SEASONS</h6>
+                        <p>Rent pontoons, wave runners, pedal boards, and more on beautiful Powers Lake, WI (only <span class="importance">10 min</span> away from Lake Geneva)!</p>
+                        <div class="flex-btns"><a class="n-b-db-content-btn">WATERCRAFT AND PIER RENTAL SERVICES</a></div>
+                    </div>
+                    <div class="n-b-db-content" id="n-b-db-cfair">
+                        <h5>RACINE COUNTY FAIR</h5>
+                        <h6>TBD</h6>
+                        <p>The Racine County Fair is our next upcoming event!</p>
+                        <div class="flex-btns">
+                            <a href="https://www.racinecountyfair.com/" class="n-b-db-content-btn" id="n-b-db-fair">RCF CITE</a>
+                            <a href="events.html" class="n-b-db-content-btn" id="n-b-db-more">MORE OF OUR EVENTS</a>
+                        </div>
+                    </div>
+                    <div class="n-b-db-content">
+                        <h5></h5>
+                        <h6></h6>
+                        <p></p>
+                        <div class="flex-btns"><a class="n-b-db-content-btn"></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navigation-links">
+            <div class="lnav-left">
+                <ul role="menubar" class="lnav-l-menubar">
+                    <li role="none" class="lnav-llist-item">
+                        <div role="menuitem" class="lnav-l-item">
+                            <a class="lnav-l-link" href="index.html">UNCLE ED'S BBQ GRILL</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="lnav-right">
+                <ul role="menubar" class="lnav-r-menubar">
+                    <li role="none" class="lnav-rlist-item">
+                        <div role="menuitem" class="lnav-r-item">
+                            <a class="lnav-r-link" href="events.html" >Events</a>
+                        </div>
+                    </li>
+                    <li role="none" class="lnav-rlist-item">
+                        <div role="menuitem" class="lnav-r-item">
+                            <a class="lnav-r-link" href="wtb.html" >Where To Buy</a>
+                        </div>
+                    </li>
+                    <li role="none" class="lnav-rlist-item">
+                        <div role="menuitem" class="lnav-r-item">
+                            <a class="lnav-r-link" href="sauce.html" >Sauce Info</a>
+                        </div>
+                    </li>
+                    <li role="none" class="lnav-rlist-item">
+                        <div role="menuitem" class="lnav-r-item">
+                            <a class="lnav-r-link" href="recipes.html" >Recipes</a>
+                        </div>
+                    </li>
+                    <li role="none" class="lnav-rlist-item">
+                        <div role="menuitem" class="lnav-r-item">
+                            <a class="lnav-r-link" href="history.html" >History</a>
+                        </div>
+                    </li>
+                    <li role="none" class="lnav-rlist-item">
+                        <div role="menuitem" class="lnav-r-item">
+                            <a class="lnav-r-link" href="contact.html" >Contact</a>
+                        </div>
+                    </li>
+                    <li role="none" class="lnav-rlist-item">
+                        <div role="menuitem" class="lnav-r-item">
+                            <a class="lnav-r-link" href="cart.html" >
+                                <div>
+                                    <img src="media/nav/cart.png" alt="cart icon" onmouseout="this.src= 'media/nav/cart.png';" onmouseover="this.src= 'media/nav/cart-active.png';" >
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <nav class="mobilenav">
+        <div class="notifications"></div>
+        <div class="navigation-links">
+            <div class="lnav-left">
+                <a class="lnav-l-link" href="index.html">
+                    <div class="lnav-l-imgbox">
+                        <!--either img or svg tag, preferrably svg-->
+                    </div>
+                </a>
+            </div>
+            <div class="lnav-right">
+                <ul role="menubar" class="lnav-r-menubar">
+                    <li role="none" class="lnav-rlist-item">
+                        <div role="menuitem" class="lnav-r-item">
+                            <a class="lnav-r-link" href="" ></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script>
+        let prevScrollpos = window.scrollY;
+        window.onscroll = function() {
+            let currentScrollPos = window.scrollY;
+            if (prevScrollpos < currentScrollPos) {
+                document.getElementById("scrollnav").style.top = "0";
+                if(document.getElementById("n-b-dropdown").style.height === "300px"){
+                    document.getElementById("n-b-dropdown").style.height = "0px";
+                    document.getElementById("n-b-dropdown").style.transition = "height 0.5s";
+                    document.getElementById("n-b-dropdown").style.transitionTimingFunction = "ease-in-out";
+
+                    document.getElementById("n-b-drpbtn-dropIcon").style.rotate = "0deg";
+                    document.getElementById("n-b-drpbtn-dropIcon").style.transition = "0.5s";
+                }
+            } else if (currentScrollPos < 5){
+                document.getElementById("scrollnav").style.top = "30px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+</header>
+<main>
+        <div class="history">
+            <div class="about-us">
+                <div class="a-u-txt">
+                    <h1>A LITTLE BIT ABOUT US</h1>
+                    <p>
+                        Uncle Ed's BBQ Grill has been owned and operated by the Klein Family since 1962,
+                        previously the Harbor Lights. We changed our name for simplicity and name recognition
+                        in the marketplace. We have our own Uncle Ed's Backyard BBQ Sauce and Marinade in local
+                        area stores, and some area restaurants. We are also in several local area festivals.
+                        Try us out for catering either in your home, for your company event, or, if a day on the
+                        lake is what you're looking for, check out our pontoon and rowboat rentals. Powers Lake is a
+                        beautiful place to spend your days, enjoy a day with us. We are open all year round.
+                    </p>
+                </div>
+                <div class="a-u-img">
+                    <img src="media/history/h-building.jpg" alt="The old building of Uncle Ed's BBQ Grill">
+                </div>
+            </div>
+
+            <div class="birth">
+                <div class="b-img">
+                    <img src="media/history/h-sauce.jpg" alt="Uncle Ed's BBQ Sauce">
+                </div>
+                <div class="b-txt">
+                    <h1>THE BIRTH OF THE ORIGINAL FORMULA</h1>
+                    <p>
+                        Harbor Lights Restaurant, Powers Lake WI, Labor Day Weekend 1988. A weekend that that
+                        was a total flop as a promotion for the family restaurant. Our first annual rib roast
+                        looked like it might be our last. There were several factors, we were using beef ribs,
+                        the weather didn't cooperate very well, and the sauce that we got from our supplier was
+                        just not cuttin' it! So I started looking around for a good recipe for BBQ Sauce. (After
+                        finding nothing in the market that we thought would work.) We experimented with some 228
+                        different recipes. Late one night, I put away my experiment, tucked the recipe into my
+                        shirt pocket, and went home dog-tired. I went to work the following morning, tasted the
+                        concoction, wow, this one could work, now where's that recipe? Uh oh. The washing machine!
+                        I rushed home only to find the machine had finished its load. I got the shirt out,
+                        carefully unfolded the recipe, and tried to copy what I could from the ink-streaked paper.
+                        Some was still legible, some was not, so I made another batch. It worked!
+                    </p>
+                </div>
+            </div>
+            <div class="b-cont">
+                <p>
+                    Over the next two years we tested this recipe with everyone we knew.
+                    More and more people were coming to the restaurant to buy the sauce and were asking
+                    us to put it into stores! Now we had to come up with a name. The only things I could
+                    think of were my nephew and niece and the fact that this recipe was truly born in our backyard.
+                    Our logo is a grill with the weapons every meat burning person knows well - the fork and tongs.
+                    We wanted to convey what we all are by nature - Backyard Cooks.
+                </p>
+                <p>
+                    By 1990 we test marketed it in the Dane, Racine, and Kenosha County Fairs.
+                    We had some very positive results. We went in with rack ribs, chicken and garlic bread
+                    and sold the sauce on the side. The rib sandwich was actually a mistake, but that's another story!
+                </p>
+                <p>
+                    By 1993, I went to the local store to see if they were interested in taking us on.
+                    That was Speigelhoff's Pick-N-Save in Burlington. We sold all that we brought in,
+                    and the manager re-ordered! We soon were able to get two more stores and started increasing
+                    production. We soon developed 30+ private and corporate stores and were doing several special
+                    events over the year.
+                </p>
+                <p>
+                    That brings us to where we are today, where our future is not only bright, but tasty too!
+                    Our commitment is to our customers first, who, if not for their support, we would never
+                    have been able to exist. Thank you, all of you, for all your support.
+                </p>
+                <p>
+                    No matter how young or old, pro or novice on the grill or in the kitchen, just remember
+                    you're always welcome in our backyard.
+                </p>
+                <p>
+                    - Uncle Ed and Family.
+                </p>
+            </div>
+
+            <div class="wonder">
+                <h1>FOR THOSE WHO WERE WONDERING</h1>
+                <div class="old">
+                    <h5>THE OLD BUILDING</h5>
+                    <p>
+                        The old building was about 100 years old when it was donated to the fire department.
+                        It stood on several different foundations which gave it its unique floor structure.
+                        The perimeter was supported by cedar posts and cinder block. A flood in the year 2000
+                        seriously damaged this foundation, causing it to settle 6 inches in 6 months. The old
+                        building never stopped business for the 100 years of service it was here (this has
+                        always been a place for merriment). The old building consisted of 5 different additions,
+                        all having their own unique structure and foundational support. The floor was made of
+                        virgin maple, estimated to be at least 3 to 400 years old. That would date it from
+                        sapling, to 1602 (when this floor started growing as trees). The United States were
+                        founded in 1776 (for perspective).
+                    </p>
+                </div>
+                <div class="new">
+                    <h5>THE NEW BUILDING</h5>
+                    <p>
+                        The new building sits on 27, 10 inch pilings each 81 feet down (for a perspective of
+                        what this looks like, go to the north corner of the building, and look at the new utility
+                        pole. Imagine 2 of those one on top of the other, and add 1 foot. That is 81 feet).
+                        These piles are filled with concrete. There is 14 inches of structural steel on top of
+                        the piles. Then there is 12 inches of Span Crete (this is the same material that is used
+                        to make road bridges) on top of that. The building is all 2x6 construction, with custom
+                        truss work supporting the roof.
+                    </p>
+                    <p>
+                        The floor and the wainscot are from the old building. All the trim was made by the Klein
+                        family personally. The bar consists of red oak, and the medallions are made from cherry,
+                        maple, and black walnut. The bar was also made by the Klein family. The kitchen has the
+                        best equipment that is available on the market at the time, and is air-conditioned separately
+                        from the dining room.
+                    </p>
+                    <p>We hope you enjoy your time with us, we have done our very best to give the area something
+                        we all can be very proud of. We also designed the restaurant with comfort and ease in mind.
+                        This is the very best that we have to offer. Thank you for coming, we hope to see you soon.
+                    </p>
+                </div>
+            </div>
+        </div>
+</main>
+<footer>
+    <div>
+        <ul class="foot">
+            <li class="foot-ue-bbq">
+                <div>
+                    <a href="index.html">
+                        <div>
+                            <img id="foot-img" src="media/footer/logo.png" alt="Uncle Ed's BBQ Grill Logo">
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="madein">
+                <div>
+                    <p>Made in</p>
+                    <a class="powers" href="#">Powers Lake</a><br/>
+                    <p>Wisconsin</p>
+                </div>
+            </li>
+            <li class="contact-social">
+                <div>
+                    <p>Contact & Social Media</p>
+                    <ul class="c-s-list">
+                        <li class="c-s-l-item" id="email"><span class="normText">&ensp;iamribman@gmail.com</span></li>
+                        <li class="c-s-l-item" id="phone"><span class="normText">&ensp;(262) 295 - 5253</span></li>
+                        <li class="c-s-l-item" id="fb"><span class="normText">&ensp;See the Most Recent News!</span></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="legal">
+                <div>
+                    <br/>
+                    <ul class="legal-list">
+                        <li class="terms"><a href="#">Terms</a></li>
+                        <li class="conditions"><a href="#">Conditions</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</footer>
 </body>
 </html>

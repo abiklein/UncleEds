@@ -11,6 +11,217 @@
     -->
 </head>
 <body>
+<header>
+    <a></a>
+    <nav class="mastnav">
+        <div class="master-navbar">
+            <a class="master-links" href="index.html">
+                <div class="m-l-container">
+                    <img src="media/nav/master-bbq.png" alt="Uncle Ed's BBQ Grill Direct Image">
+                </div>
+            </a>
+            <a class="master-links" id="watercraft" href="#">
+                <div class="m-l-container">
+                    <img src="media/nav/master-boat.png" alt="Uncle Ed's Boats Direct Image">
+                </div>
+            </a>
+        </div>
+    </nav>
+    <nav class="localnav" id="scrollnav">
+        <div class="notifications">
+            <div class="n-button">
+                <button class="n-b-dropbtn" onclick="notiBtn()">
+                    Upcoming Events <img class="n-b-drpbtn-dropIcon" id="n-b-drpbtn-dropIcon" src="media/nav/drop_icon.png"
+                                         alt="drop down icon" />
+                    <script>
+                        function notiBtn(){
+                            if(document.getElementById("n-b-dropdown").style.height === "0px"){
+                                document.getElementById("n-b-dropdown").style.height = "300px";
+                                document.getElementById("n-b-dropdown").style.transition = "height 0.5s";
+                                document.getElementById("n-b-dropdown").style.transitionTimingFunction = "ease-in-out";
 
+
+                                document.getElementById("n-b-drpbtn-dropIcon").style.rotate = "180deg";
+                                document.getElementById("n-b-drpbtn-dropIcon").style.transition = "0.5s";
+
+
+                            }
+                            else{
+                                document.getElementById("n-b-dropdown").style.height = "0px";
+                                document.getElementById("n-b-dropdown").style.transition = "height 0.5s";
+                                document.getElementById("n-b-dropdown").style.transitionTimingFunction = "ease-in-out";
+
+                                document.getElementById("n-b-drpbtn-dropIcon").style.rotate = "0deg";
+                                document.getElementById("n-b-drpbtn-dropIcon").style.transition = "0.5s";
+
+                            }
+                        }
+                    </script>
+                </button>
+            </div>
+            <div class="n-b-dropdown" id="n-b-dropdown">
+                <div class="n-b-db-flex">
+                    <div class="n-b-db-content">
+                        <h5>BOAT RENTALS</h5>
+                        <h6>ONGOING FROM SPRING TO FALL SEASONS</h6>
+                        <p>Rent pontoons, wave runners, pedal boards, and more on beautiful Powers Lake, WI (only <span class="importance">10 min</span> away from Lake Geneva)!</p>
+                        <div class="flex-btns"><a class="n-b-db-content-btn">WATERCRAFT AND PIER RENTAL SERVICES</a></div>
+                    </div>
+                    <div class="n-b-db-content" id="n-b-db-cfair">
+                        <h5>RACINE COUNTY FAIR</h5>
+                        <h6>TBD</h6>
+                        <p>The Racine County Fair is our next upcoming event!</p>
+                        <div class="flex-btns">
+                            <a href="https://www.racinecountyfair.com/" class="n-b-db-content-btn" id="n-b-db-fair">RCF CITE</a>
+                            <a href="events.html" class="n-b-db-content-btn" id="n-b-db-more">MORE OF OUR EVENTS</a>
+                        </div>
+                    </div>
+                    <div class="n-b-db-content">
+                        <h5></h5>
+                        <h6></h6>
+                        <p></p>
+                        <div class="flex-btns"><a class="n-b-db-content-btn"></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navigation-links">
+            <div class="lnav-left">
+                <ul role="menubar" class="lnav-l-menubar">
+                    <li role="none" class="lnav-llist-item">
+                        <div role="menuitem" class="lnav-l-item">
+                            <a class="lnav-l-link" href="index.html">UNCLE ED'S BBQ GRILL</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="lnav-right">
+                <ul role="menubar" class="lnav-r-menubar">
+                    <li role="none" class="lnav-rlist-item">
+                        <div role="menuitem" class="lnav-r-item">
+                            <a class="lnav-r-link" href="events.html" >Events</a>
+                        </div>
+                    </li>
+                    <li role="none" class="lnav-rlist-item">
+                        <div role="menuitem" class="lnav-r-item">
+                            <a class="lnav-r-link" href="wtb.html" >Where To Buy</a>
+                        </div>
+                    </li>
+                    <li role="none" class="lnav-rlist-item">
+                        <div role="menuitem" class="lnav-r-item">
+                            <a class="lnav-r-link" href="sauce.html" >Sauce Info</a>
+                        </div>
+                    </li>
+                    <li role="none" class="lnav-rlist-item">
+                        <div role="menuitem" class="lnav-r-item">
+                            <a class="lnav-r-link" href="recipes.html" >Recipes</a>
+                        </div>
+                    </li>
+                    <li role="none" class="lnav-rlist-item">
+                        <div role="menuitem" class="lnav-r-item">
+                            <a class="lnav-r-link" href="history.html" >History</a>
+                        </div>
+                    </li>
+                    <li role="none" class="lnav-rlist-item">
+                        <div role="menuitem" class="lnav-r-item">
+                            <a class="lnav-r-link" href="contact.html" >Contact</a>
+                        </div>
+                    </li>
+                    <li role="none" class="lnav-rlist-item">
+                        <div role="menuitem" class="lnav-r-item">
+                            <a class="lnav-r-link" href="cart.html" >
+                                <div>
+                                    <img src="media/nav/cart.png" alt="cart icon" onmouseout="this.src='media/nav/cart.png';" onmouseover="this.src='media/nav/cart-active.png';" >
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <nav class="mobilenav">
+        <div class="notifications"></div>
+        <div class="navigation-links">
+            <div class="lnav-left">
+                <a class="lnav-l-link" href="index.html">
+                    <div class="lnav-l-imgbox">
+                        <!--either img or svg tag, preferrably svg-->
+                    </div>
+                </a>
+            </div>
+            <div class="lnav-right">
+                <ul role="menubar" class="lnav-r-menubar">
+                    <li role="none" class="lnav-rlist-item">
+                        <div role="menuitem" class="lnav-r-item">
+                            <a class="lnav-r-link" href="" ></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script>
+        let prevScrollpos = window.scrollY;
+        window.onscroll = function() {
+            let currentScrollPos = window.scrollY;
+            if (prevScrollpos < currentScrollPos) {
+                document.getElementById("scrollnav").style.top = "0";
+                if(document.getElementById("n-b-dropdown").style.height === "300px"){
+                    document.getElementById("n-b-dropdown").style.height = "0px";
+                    document.getElementById("n-b-dropdown").style.transition = "height 0.5s";
+                    document.getElementById("n-b-dropdown").style.transitionTimingFunction = "ease-in-out";
+
+                    document.getElementById("n-b-drpbtn-dropIcon").style.rotate = "0deg";
+                    document.getElementById("n-b-drpbtn-dropIcon").style.transition = "0.5s";
+                }
+            } else if (currentScrollPos < 5){
+                document.getElementById("scrollnav").style.top = "30px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+</header>
+<footer>
+    <div>
+        <ul class="foot">
+            <li class="foot-ue-bbq">
+                <div>
+                    <a href="index.html">
+                        <div>
+                            <img id="foot-img" src="media/footer/logo.png" alt="Uncle Ed's BBQ Grill Logo">
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="madein">
+                <div>
+                    <p>Made in</p>
+                    <a class="powers" href="#">Powers Lake</a><br/>
+                    <p>Wisconsin</p>
+                </div>
+            </li>
+            <li class="contact-social">
+                <div>
+                    <p>Contact & Social Media</p>
+                    <ul class="c-s-list">
+                        <li class="c-s-l-item" id="email"><span class="normText">&ensp;iamribman@gmail.com</span></li>
+                        <li class="c-s-l-item" id="phone"><span class="normText">&ensp;(262) 295 - 5253</span></li>
+                        <li class="c-s-l-item" id="fb"><span class="normText">&ensp;See our page on Facebook!</span></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="legal">
+                <div>
+                    <br/>
+                    <ul class="legal-list">
+                        <li class="terms"><a href="#">Terms</a></li>
+                        <li class="conditions"><a href="#">Conditions</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</footer>
 </body>
 </html>

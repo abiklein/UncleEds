@@ -18,9 +18,24 @@ font-family: 'Poppins', sans-serif;
 800-ExtraBold
 900-Black
 
- */
-*{
-    font-family: 'Poppins', sans-serif;
+h1{
+    font-size: 22px;
+    font-family: 'Coustard', serif;
+    color: #1B1616;
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+    1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
+h2{
+    color: #FF5E00;
+    font-weight: 700;
+    font-size: 30px;
+}
+h3{
+    color: #FF5E00;
+    letter-spacing: 2px;
+}
+h4{
+    //////
 }
 h5{
     color:#FF5E00;
@@ -29,6 +44,27 @@ h5{
 h6{
     font-size: 14px;
 }
+
+break-points:
+Small	| up to 640px	| 20" to 65" | TVs	                     |  320x569, 360x640, 480x854
+Medium	| 641 - 1007px	| 7" to 12"	 | Tablets                   |	960x540
+Large	| 1008px and up	| 13" and up | PCs, Laptops, Surface Hub |	1024x640, 1366x768, 1920x1080
+Source: https://learn.microsoft.com/en-us/windows/apps/design/layout/screen-sizes-and-breakpoints-for-responsive-design
+ */
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+h5{
+    color:#FF5E00;
+    font-size: 16px;
+}
+h6{
+    font-size: 14px;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -49,6 +85,7 @@ header{
     width: 100%;
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 
 .mastnav{
@@ -61,24 +98,54 @@ header{
     margin: 0;
     padding: 0;
 }
+.master-navbar{
+    display: flex;
+    flex-direction: row;
+    height: inherit;
+}
+.master-links{
+    padding: 0;
+    margin: 0;
+}
+.m-l-container{
+    height: 30px;
+}
+.master-links{
+    height: 30px;
+    width: 90px;
+    margin-left: 60px;
+}
+.master-links img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#watercraft{
+    margin-left: 20px;
+}
 
 /*Upcoming Events bar (orange)*/
 .notifications{
+    margin: 0;
+    padding: 0;
+    background-color: #FF5E00;
+    width: inherit;
+    height: 30px;
+    position: relative;
     text-align: center;
-    z-index: 9;
+
 }
-.n-button, .n-button *{
-    z-index: 9;
+.notifications *{
+    z-index: -1;
 }
-.n-b-dropdown, .n-b-dropdown *{
-    z-index: 3;
-}
+
 .n-b-dropbtn{
     background-color: rgba(0,0,0,0);
     text-decoration: none;
     border: none;
     color: white;
     letter-spacing: 1px;
+    text-transform: uppercase;
 }
 .n-b-dropbtn:hover{
     cursor: pointer;
@@ -88,9 +155,7 @@ header{
     padding: 0;
     width: 20px;
 }
-#n-b-dropdown{
-    visibility: hidden;
-    z-index: 100;
+.n-b-dropdown{
     display: flex;
     position: absolute;
     margin-top: 5px;
@@ -107,7 +172,11 @@ header{
 }
 .n-b-dropdown *{
     visibility: inherit;
-    transition: inherit;
+    transition: 0.3s ease-in-out; /vendorless fallback /
+    -o-transition: 0.3s ease-in; / opera /
+    -ms-transition: 0.3s ease-in; / IE 10 /
+    -moz-transition: 0.3s ease-in; / Firefox /
+    -webkit-transition: 0.3s ease-in; /safari and chrome /
     transition-timing-function: inherit;
 }
 
@@ -117,27 +186,28 @@ header{
     flex-wrap: nowrap;
     max-width: 1280px;
     max-height: 200px;
-    background-color: white;
     justify-content: center;
     gap: 5vw;
     margin: 0 100px 0 40px;
     padding:  0;
+    position: absolute;
+    bottom: 0;
 }
 .n-b-db-content{
     min-width:25vw;
-    background-color: white;
 }
 .n-b-db-content h5, h6, p, a{
     padding: 0;
     margin: 0;
     text-align: center;
+
 }
 .n-b-db-content p{
     text-align:left;
     width: 25vw;
     height: 100px;
     position: absolute;
-    bottom: 50px;
+    bottom: 70px;
 }
 .n-b-db-content h5, h6{
     width: 25vw;
@@ -145,18 +215,18 @@ header{
 }
 .n-b-db-content h5{
     text-align:center;
-    bottom: 180px;
+    bottom: 210px;
 }
 .n-b-db-content h6{
     text-align:left;
-    bottom: 155px;
+    bottom: 175px;
 }
 .flex-btns{
     margin-top: 10px;
     display: flex;
     flex-direction: row;
     width: 100%;
-    bottom: 20px;
+    bottom: 50px;
     position: absolute;
     color: #FF5E00;
 }
@@ -174,11 +244,11 @@ header{
 }
 #n-b-db-fair{
     text-align: left;
-    width: 10%;
+    width: calc(25vw/2);
 }
 #n-b-db-more{
     text-align: right;
-    width: 15%;
+    width: calc(25vw/2);
 }
 
 /*local navigation bar (brown)*/
@@ -193,13 +263,7 @@ header{
     transition: top 0.4s;
 }
 
-.notifications{
-    margin: 0;
-    padding: 0;
-    background-color: #FF5E00;
-    width: inherit;
-    height: 30px;
-}
+
 .navigation-links{
     margin: 0;
     padding: 0;
@@ -207,6 +271,7 @@ header{
     width: inherit;
     height: 35px;
 }
+
 /*local nav left link (brown)*/
 .lnav-left{
     display: inline-block;
@@ -262,4 +327,42 @@ header{
 .lnav-right li a:visited{
     text-decoration: none;
 }
+.lnav-r-link img{
+    padding-top: 1px;
+    width: 20px;
+    height: auto;
+}
 
+
+@media only screen and (max-width: 1280px){
+    .lnav-left li a{
+        font-size: 12px;
+        padding-top:8px;
+    }
+    .lnav-right li a{
+        font-size: 12px;
+        padding-top:8px;
+    }
+}
+
+@media only screen and (min-width: 1008px) and (max-width: 1280px){
+    .n-b-db-flex{
+        gap: 10vw;
+        margin-left: 15vw;
+    }
+    .n-b-db-content *{
+        font-size: 14px;
+    }
+    .n-b-db-content h6{
+        font-size: 12px;
+    }
+    #n-b-db-fair{
+        text-align: left;
+        width: calc(20vw/2);
+    }
+    #n-b-db-more{
+        text-align: left;
+        width: calc(30vw/2);
+    }
+
+}
