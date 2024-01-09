@@ -56,7 +56,7 @@ html{
     position: relative;
 }
 body{
-    min-height: 78vh;
+    min-height: 90vh;
     background-color: #f6e6dd;
 }
 main{
@@ -148,6 +148,7 @@ a:hover{
     text-align: left;
     width: 55%;
     padding-right: 10px;
+    max-width: 250px;
 }
 .a-address{
     margin-left: 20px;
@@ -206,4 +207,130 @@ a:hover{
 }
 .h-t-item{
     margin-bottom: 20px;
+}
+.visit-sister{
+    display: none;
+}
+
+/*--------------------------------------------------------*/
+/*Media sizes*/
+/*smaller desktop*/
+@media only screen and (min-width: 1008px) and (max-width: 2100px){
+
+
+}
+/*tablet*/
+@media only screen and (min-width: 641px) and (max-width: 1008px){
+    main{
+        margin-top: 0;
+    }
+    .a-link{
+        text-align: left;
+        width: 50%;
+        padding-right: 10px;
+        max-width: 250px;
+    }
+    .a-link a{
+        font-size: 14px;
+    }
+    .a-address{
+        margin-left: 10px;
+        width: 50%;
+        min-width: 155px;
+    }
+    .a-address p{
+        font-size: 14px;
+    }
+
+}
+/*phone*/
+@media only screen and (max-width: 640px){
+    .visit-sister{
+        display: block;
+    }
+    .flex-space{
+        display: none;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .flex-contact{
+        padding: 0 30px;
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+    'header header header header'
+    'contact contact contact contact'
+    'hours hours hours hours'
+    'address address address address'
+    'map map map map';
+        gap: 10px;
+    }
+
+    /*address*/
+    .address{
+        grid-area: address;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+        padding-top: 0;
+    }
+    .a-link{
+        text-align: left;
+        width: 100%;
+        padding-right: 10px;
+        max-width: 250px;
+    }
+    .a-link p{
+        font-size: 14px;
+        text-align: left;
+        padding-top: 15px;
+    }
+    .a-link a{
+        font-size: 18px;
+        text-align: left;
+    }
+    #sister-site{
+        font-size: 14px;
+    }
+    .a-address{
+        margin-left: 0;
+        width: 50%;
+        min-width: 155px;
+        margin-top: 20px;
+    }
+    .a-address p{
+        font-size: 14px;
+    }
+    /*hours*/
+    .hours{
+        margin-top: 20px;
+        grid-area: hours;
+    }
+
+    /*map*/
+    .map{
+        grid-area: map;
+        height: 100%;
+        margin-left: 0;
+
+    }
+    .google-map {
+        padding-top: 30px;
+        padding-bottom: 80px;
+        position: relative;
+        height: 500px;
+    }
+
+    .google-map iframe {
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        position: relative;
+    }
+
 }

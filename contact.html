@@ -28,7 +28,30 @@
 
 </head>
 <body>
-<header>
+<header class="mobile">
+    <nav class="mobilenav">
+        <div class="notifications"></div>
+        <div class="navigation-links">
+            <div class="lnav-left">
+                <a class="lnav-l-link" href="index.html">
+                    <div class="lnav-l-imgbox">
+                        <!--either img or svg tag, preferrably svg-->
+                    </div>
+                </a>
+            </div>
+            <div class="lnav-right">
+                <ul role="menubar" class="lnav-r-menubar">
+                    <li role="none" class="lnav-rlist-item">
+                        <div role="menuitem" class="lnav-r-item">
+                            <a class="lnav-r-link" href="" ></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<header class="desktop">
     <a></a>
     <nav class="mastnav">
         <div class="master-navbar">
@@ -157,27 +180,6 @@
             </div>
         </div>
     </nav>
-    <nav class="mobilenav">
-        <div class="notifications"></div>
-        <div class="navigation-links">
-            <div class="lnav-left">
-                <a class="lnav-l-link" href="index.html">
-                    <div class="lnav-l-imgbox">
-                        <!--either img or svg tag, preferrably svg-->
-                    </div>
-                </a>
-            </div>
-            <div class="lnav-right">
-                <ul role="menubar" class="lnav-r-menubar">
-                    <li role="none" class="lnav-rlist-item">
-                        <div role="menuitem" class="lnav-r-item">
-                            <a class="lnav-r-link" href="" ></a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
     <script>
         let prevScrollpos = window.scrollY;
         window.onscroll = function() {
@@ -210,7 +212,9 @@
         </ul>
         <div class="address">
             <div class="a-link">
-                <a href="#" class="a-l-watercraft" title="Uncle Ed's Watercrafts">FOR WATERCRAFT RENTALS, COME VISIT US!</a>
+                <a href="#" class="a-l-watercraft" title="Uncle Ed's Watercrafts"><b>FOR WATERCRAFT RENTALS, COME VISIT US!</b></a>
+                <p class="visit-sister">Want to learn more about our rentals?</p>
+                <p class="visit-sister">Visit our sister site <a id="sister-site" href="#"><b>here.</b></a></p>
             </div>
             <div class="a-address">
                 <p class="a-a-p b-bold">ADDRESS</p>
@@ -240,7 +244,7 @@
     </div>
     <div class="flex-space"></div>
 </main>
-<footer>
+<footer class="desktop">
     <div>
         <ul class="foot">
             <li class="foot-ue-bbq">
@@ -281,5 +285,6 @@
         </ul>
     </div>
 </footer>
+<footer class="mobile"></footer>
 </body>
 </html>

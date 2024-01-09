@@ -71,7 +71,7 @@ body{
     margin: 0;
     padding: 0;
 }
-.mobilenav{
+.mobile{
     display: none;
 }
 header ul{
@@ -336,6 +336,9 @@ header{
 }
 
 
+/*--------------------------------------------------------*/
+/*Media sizes*/
+/*smaller desktop*/
 @media only screen and (max-width: 1280px){
     .lnav-left li a{
         font-size: 12px;
@@ -367,4 +370,30 @@ header{
         width: calc(30vw/2);
     }
 
+}
+/*tablet*/
+@media only screen and (min-width: 641px) and (max-width: 1008px){
+    /*hide desktop nav & show mobile version*/
+    /*!!! affects footer*/
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+}
+/*phone*/
+@media only screen and (max-width: 640px){
+    /*hide desktop nav & show mobile version*/
+    /*!!! affects footer*/
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
 }
