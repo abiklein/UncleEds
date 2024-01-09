@@ -1,0 +1,430 @@
+/*
+ Color scheme:
+ #FF5E00
+ #332929
+ #FFA200
+ #DC4B00
+ #1B1616 Dark Brown
+
+ font-family: 'Coustard', serif;
+ 400-Regular
+ 900-Black
+
+ font-family: 'Poppins', sans-serif;
+ 200-ExtraLight
+ 400-Regular
+ 500-Medium
+ 600-SemiBold
+ 700-Bold
+ 800-ExtraBold
+ 900-Black
+
+h1{
+    font-size: 22px;
+    font-family: 'Coustard', serif;
+    color: #1B1616;
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+    1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
+h2{
+    color: #FF5E00;
+    font-weight: 700;
+    font-size: 30px;
+}
+h3{
+    color: #FF5E00;
+    letter-spacing: 2px;
+}
+h4{
+    //////
+}
+h5{
+    color:#FF5E00;
+    font-size: 16px;
+}
+h6{
+    font-size: 14px;
+}
+
+Button transition animation:
+transition: 0.3s ease-in-out; vendorless fallback
+ -o-transition: 0.3s ease-in; opera
+ -ms-transition: 0.3s ease-in;  IE 10
+ -moz-transition: 0.3s ease-in;  Firefox
+ -webkit-transition: 0.3s ease-in; safari and chrome
+
+break-points:
+Small	| up to 640px	| 20" to 65" | TVs	                     |  320x569, 360x640, 480x854
+Medium	| 641 - 1007px	| 7" to 12"	 | Tablets                   |	960x540
+Large	| 1008px and up	| 13" and up | PCs, Laptops, Surface Hub |	1024x640, 1366x768, 1920x1080
+Source: https://learn.microsoft.com/en-us/windows/apps/design/layout/screen-sizes-and-breakpoints-for-responsive-design
+  */
+html{
+    position: relative;
+}
+.wtb-land, .our-products-banner, .partners, .wtb-filter, .wtb-products{
+    margin: 0;
+    gap: 0;
+}
+main{
+    margin-top: 90px;
+    grid-template-areas:
+    "land land land land land"
+   "ban ban ban ban ban"
+    "prod prod prod prod prod"
+    "nav nav nav nav nav"
+    "spacer shop shop shop spacer"
+;
+}
+
+/*-------------------------------------------------------------------*/
+/*landing*/
+/*image - landing*/
+.wtb-land{
+    width: 100vw;
+    height: 60vh;
+    grid-area: land;
+}
+#wtbLandImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+/*text - landing*/
+.wtb-land-overlay{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 100vw;
+    height: 60vh;
+    align-items: center;
+}
+.wtb-land-txt{
+    color: #d7c6be;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+}
+/*buttons - landing*/
+.wtb-land-txt-btns{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    margin-top: 40px;
+}
+.wtb-land-txt p{
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+}
+.wtb-land-txt-single-btn a{
+    display: inline-block;
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    text-decoration: none;
+    width: 90%;
+    padding: 10px 5px 10px 5px;
+    margin: 0;
+    border: 2px solid #d7c6be;
+}
+.wtb-land-txt-single-btn a:hover{
+    font-size: 25px;
+    font-weight: 500;
+    text-decoration: none;
+}
+.wtb-land-txt-single-btn a:visited{
+    font-size: 25px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.wtb-land-txt-single-btn{
+    width: 50%;
+}
+#wtb-land-text-btn-left{
+    text-align: left;
+}
+#wtb-land-text-btn-right{
+    text-align: right;
+}
+
+/*-------------------------------------------------------------------*/
+/*Locations*/
+/*layout - Locations*/
+.partners{
+    min-height: 350px;
+    max-height: 600px;
+    background-color: #332929;
+    grid-area: ban;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    vertical-align: center;
+    align-items: center;
+}
+/*leftText - Locations*/
+.spacer{
+    width: 10%;
+}
+.p-locations{
+    width: 60%;
+    min-height: 350px;
+    max-height: 600px;}
+.p-txt{
+    color: #d7c6be;
+    width: 20%;
+    min-height: 350px;
+    max-height: 600px;
+    line-height: 35px;
+    font-size: 18px;
+}
+.p-text-content-txt a{
+    font-weight: 600;
+    text-decoration: none;
+    color: #f6e7e0;
+}
+.p-text-content-txt a:hover{
+    text-decoration: underline;
+}
+.p-text-content-txt a:visited{
+    text-decoration: none;
+}
+.p-txt-content{
+    padding: 50px 50px 0 0;
+}
+.p-txt-content h1 {
+    text-align: left;
+    color: #d03a00;
+    font-family: 'Coustard', serif;
+    text-shadow: 2px 0 black, -2px 0 black, 0 3px black, 0 -2px black,
+    1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+    margin: 0;
+}
+.p-txt-content p {
+    text-align: left;
+    padding-top: 20px;
+
+}
+/*rightPig - Locations*/
+.p-locations-layout{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 100%;
+    align-items: center;
+}
+/*image*/
+.pig-image{
+    max-width: 700px;
+    min-width: 200px;
+    margin: 50px;
+}
+.pig-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*address cards*/
+.pig-addresses{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    min-width: 550px;
+    max-height: 600px;
+    text-align: center;
+    vertical-align: center;
+
+}
+.pig-addresses a{
+    text-decoration: none;
+    color: #d7c6be;
+    text-align: left;
+}
+.pig-address{
+    width: 250px;
+    height: 230px;
+    background-color: #574f4d;
+    border: black 2px solid;
+    margin: 30px 20px 0 0;
+    font-size: 16px;
+
+    transition: 0.3s ease-in-out; /* vendorless fallback */
+    -o-transition: 0.3s ease-in; /* opera */
+    -ms-transition: 0.3s ease-in; /* IE 10 */
+    -moz-transition: 0.3s ease-in; /* Firefox */
+    -webkit-transition: 0.3s ease-in; /*safari and chrome */
+}
+.pig-address:hover{
+
+    color: #1B1616;
+    background-color: #ff6428;
+    border: red 3px solid;
+    margin: 30px 20px 0 0;
+    font-size: 18px;
+}
+.pig-address h1{
+    font-size: 22px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.pig-address ul{
+    margin: 0;
+    text-align: left;
+    list-style-type: none;
+}
+.normTextPig{
+    position: relative;
+    font-size: 18px;
+    bottom: 6px;
+}
+.pig-a-txt{
+    padding: 0 10px 0 20px;
+}
+.phonePig{
+    list-style-image: url('../media/footer/phone.svg');
+    font-size: 50px;
+}
+
+/*-------------------------------------------------------------------*/
+/*Store*/
+/*layout - Store*/
+#store{
+    margin-top: 240px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+}
+.our-products-banner{
+    height: 150px;
+    background-color: #d03a00;
+    grid-area: prod;
+    text-align: center;
+}
+.our-products-banner h1{
+    padding-top: 45px;
+    font-family: 'Coustard', serif;
+    font-size: 40px;
+    color: #1B1616;
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+    1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+    margin: 0;
+}
+
+.wtb-filter{
+    height: 45px;
+    background-color: #a42d00;
+    grid-area: nav;
+    text-align: center;
+}
+.wtb-filter-btns{
+    margin-right: 60px;
+}
+.wtb-filter-btns button{
+    margin-top: 10px;
+    margin-left: 80px;
+    background-color: #a42d00;
+    border: 2px solid #FF5E00;
+    font-weight: 500;
+    color: #FF5E00;
+
+    transition: 0.2s e; /* vendorless fallback */
+    -o-transition: 0.2s ease-in; /* opera */
+    -ms-transition: 0.2s ease-in; /* IE 10 */
+    -moz-transition: 0.2s ease-in; /* Firefox */
+    -webkit-transition: 0.2s ease-in; /*safari and chrome */
+}
+.wtb-filter-btns button:hover{
+    color: #332929;
+    background-color: #FF5E00;
+    cursor: pointer;
+
+}
+.wtb-filter-btns button:active{
+    color: #574f4d;
+    background-color: #d7c6be;
+    cursor: pointer;
+
+}
+
+.wtb-products{
+    background-color: #d7c6be;
+    grid-area: shop;
+    display: flex;
+    height: 600px;
+}
+
+.wtb-p-item{
+    background-color: white;
+    width: 250px;
+    height: 450px;
+    padding: 15px 25px;
+    margin: 20px;
+    border-radius: 5%;
+    box-shadow: -3px 3px 10px #574f4d;
+}
+.wtb-p-i-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 5%;
+    margin-bottom: 10px;
+}
+.wtb-p-i-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5%;
+}
+.wtb-p-i-txt p{
+    text-align: left;
+}
+.wtb-p-i-txt-item-description{
+    font-size: 12px;
+}
+.wtb-p-i-txt-title{
+    font-size: 16px;
+    padding: 5px 0;
+    font-weight: 600;
+}
+.wtb-p-i-txt-price{
+    font-size: 14px;
+}
+.wtb-p-i-txt-qty{
+    padding: 10px 0;
+    width: 100%;
+}
+#qty{
+    width: 80%;
+}
+.add-to-cart{
+    background-color: white;
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px;
+    margin-top: 20px;
+    border: #FF5E00 2px solid;
+    color: #FF5E00;
+
+    transition: 0.3s ease-in-out; /* vendorless fallback */
+    -o-transition: 0.3s ease-in; /* opera */
+    -ms-transition: 0.3s ease-in; /* IE 10 */
+    -moz-transition: 0.3s ease-in; /* Firefox */
+    -webkit-transition: 0.3s ease-in; /*safari and chrome */
+}
+.add-to-cart:hover{
+    background-color: #DC4B00;
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px;
+    margin-top: 20px;
+    border: #FF5E00 2px solid;
+    color: #ffffff;
+    cursor: pointer;
+}

@@ -52,13 +52,14 @@ Large	| 1008px and up	| 13" and up | PCs, Laptops, Surface Hub |	1024x640, 1366x
 Source: https://learn.microsoft.com/en-us/windows/apps/design/layout/screen-sizes-and-breakpoints-for-responsive-design
  */
 footer{
-    position: relative;
+    position: absolute;
     background-color: #332929;
     color: white;
     text-align: left;
     font-size: 14px;
     width: 100vw;
     height: 200px;
+    bottom: -200px;
 }
 footer a{
     text-decoration: none;
@@ -111,6 +112,7 @@ footer li *{
 }
 #foot-img{
     width: 10vw;
+    max-width: 200px;
 }
 
 

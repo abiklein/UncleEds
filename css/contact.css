@@ -52,6 +52,13 @@ Medium	| 641 - 1007px	| 7" to 12"	 | Tablets                   |	960x540
 Large	| 1008px and up	| 13" and up | PCs, Laptops, Surface Hub |	1024x640, 1366x768, 1920x1080
 Source: https://learn.microsoft.com/en-us/windows/apps/design/layout/screen-sizes-and-breakpoints-for-responsive-design
   */
+html{
+    position: relative;
+}
+body{
+    min-height: 78vh;
+    background-color: #f6e6dd;
+}
 main{
     display: flex;
     flex-direction: row;
@@ -92,7 +99,7 @@ a:hover{
 }
 .flex-contact{
     padding: 0 30px;
-    width: 1150px;
+    width: 1250px;
     display: grid;
     grid-template-areas:
     'header header header header'

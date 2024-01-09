@@ -52,6 +52,9 @@ Medium	| 641 - 1007px	| 7" to 12"	 | Tablets                   |	960x540
 Large	| 1008px and up	| 13" and up | PCs, Laptops, Surface Hub |	1024x640, 1366x768, 1920x1080
 Source: https://learn.microsoft.com/en-us/windows/apps/design/layout/screen-sizes-and-breakpoints-for-responsive-design
   */
+html{
+    position: relative;
+}
 main{
     margin-top: 90px;
     width: 100%;
@@ -60,6 +63,9 @@ main{
     background-image: url("../media/history/h-background.png");
     background-repeat: no-repeat;
     background-size: cover;
+
+    display: flex;
+    flex-direction: row;
 }
 
 h1{
@@ -71,14 +77,22 @@ h1{
 }
 p{
     text-align: left !important;
-    font-size: 12px;
+    font-size: 16px;
     padding-bottom: 20px !important;
-    line-height: 20px;
+    line-height: 25px;
 }
 
 .history{
+    min-width: 1008px;
+    max-width: 1050px;
+    width: 40%;
     margin: 0 70px;
     top: 90px;
+}
+.history-spacer{
+    min-width: 0;
+    width: calc(100% - 1008px);
+    max-width: 30%;
 }
 
 /*About section*/

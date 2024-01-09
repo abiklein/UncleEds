@@ -52,7 +52,9 @@ Large	| 1008px and up	| 13" and up | PCs, Laptops, Surface Hub |	1024x640, 1366x
 Source: https://learn.microsoft.com/en-us/windows/apps/design/layout/screen-sizes-and-breakpoints-for-responsive-design
  */
 
-
+html{
+    scroll-behavior: smooth;
+}
 *{
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
