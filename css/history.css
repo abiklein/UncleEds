@@ -55,8 +55,9 @@ Source: https://learn.microsoft.com/en-us/windows/apps/design/layout/screen-size
 html{
     position: relative;
 }
+
 main{
-    margin-top: 90px;
+    padding-top: 60px;
     width: 100%;
     text-align: left;
     overflow: hidden;
@@ -86,8 +87,8 @@ p{
     min-width: 1008px;
     max-width: 1050px;
     width: 40%;
-    margin: 0 70px;
-    top: 90px;
+    padding: 50px 50px;
+
 }
 .history-spacer{
     min-width: 0;
@@ -100,13 +101,21 @@ p{
     margin-top:40px;
     display: flex;
     flex-direction: row;
+    max-width: 100vw;
 }
 .a-u-txt{
     margin-right: 50px;
     width: 50%;
 }
+.a-u-img img{
+    padding-top: 20px;
+}
 
 /*Birth of Sauce section*/
+.birth img{
+    margin-top: 30px;
+    width: 20vw;
+}
 .b-txt{
     margin-left: 50px;
 }
@@ -127,12 +136,192 @@ p{
 
 }
 /*tablet*/
-@media only screen and (min-width: 641px) and (max-width: 1008px){
+@media only screen and (min-width: 641px) and (max-width: 1007px){
+    main{
+        padding-top: 0;
+        width: 100%;
+        max-width: 1007px;
+        text-align: left;
+        overflow: hidden;
+        background-image: url("../media/history/h-background.png");
+        background-repeat: no-repeat;
+        background-size: cover;
 
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1{
+        font-size: 25px;
+        font-family: 'Coustard', serif;
+        color: #1B1616;
+        text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+        1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+    }
+    p{
+        text-align: left !important;
+        font-size: 18px;
+        padding-bottom: 20px !important;
+        line-height: 25px;
+    }
+
+    .history{
+        min-width: 0;
+        width: 100%;
+        margin: 0;
+        top: 0;
+        padding: 0;
+    }
+    .history-spacer{
+        display: none;
+    }
+    .history p{
+        line-height: 40px;
+    }
+
+    /*About section*/
+    .about-us{
+        margin-top:0;
+        flex-direction: column-reverse;
+    }
+    .birth{
+        margin-top:0;
+        flex-direction: column;
+    }
+    .a-u-txt{
+        margin-right: 0;
+        width: 100%;
+        padding: 10px 30px;
+    }
+    .a-u-img{
+        text-align: center;
+    }
+    .a-u-img img{
+        width: 100vw;
+        padding-top: 0;
+    }
+
+    /*Birth of Sauce section*/
+    .b-img{
+        text-align: center;
+    }
+    .b-img img{
+        width: 50vw;
+    }
+    .b-txt{
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        padding: 10px 30px;
+    }
+    .b-cont{
+        margin-top: 0;
+        margin-right: 0;
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    /*Wonder section*/
+    .wonder{
+        margin-bottom: 0;
+        margin-right: 0;
+        width: 100%;
+        padding: 10px 30px 50px 30px;
+    }
 
 }
 /*phone*/
 @media only screen and (max-width: 640px){
+    main{
+        padding-top: 0;
+        width: 100%;
+        max-width: 640px;
+        text-align: left;
+        overflow: hidden;
+        background-image: url("../media/history/h-background.png");
+        background-repeat: no-repeat;
+        background-size: cover;
 
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1{
+        font-size: 20px;
+        font-family: 'Coustard', serif;
+        color: #1B1616;
+        text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+        1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+    }
+    p{
+        text-align: left !important;
+        font-size: 16px;
+        padding-bottom: 20px !important;
+        line-height: 25px;
+    }
+
+    .history{
+        min-width: 0;
+        width: 100%;
+        margin: 0;
+        top: 0;
+        padding: 0;
+    }
+    .history-spacer{
+        display: none;
+    }
+    .history p{
+        line-height: 40px;
+    }
+
+    /*About section*/
+    .about-us{
+        margin-top:0;
+        flex-direction: column-reverse;
+    }
+    .birth{
+        margin-top:0;
+        flex-direction: column;
+    }
+    .a-u-txt{
+        margin-right: 0;
+        width: 100%;
+        padding: 10px 30px;
+    }
+    .a-u-img{
+        text-align: center;
+    }
+    .a-u-img img{
+        width: 100vw;
+        padding-top: 0;
+    }
+
+    /*Birth of Sauce section*/
+    .b-img{
+        text-align: center;
+    }
+    .b-img img{
+        width: 70vw;
+    }
+    .b-txt{
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        padding: 10px 30px;
+    }
+    .b-cont{
+        margin-top: 0;
+        margin-right: 0;
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    /*Wonder section*/
+    .wonder{
+        margin-bottom: 0;
+        margin-right: 0;
+        width: 100%;
+        padding: 10px 30px 50px 30px;
+    }
 
 }

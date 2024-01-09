@@ -372,7 +372,7 @@ header{
 
 }
 /*tablet*/
-@media only screen and (min-width: 641px) and (max-width: 1008px){
+@media only screen and (min-width: 641px) and (max-width: 1007px){
     /*hide desktop nav & show mobile version*/
     /*!!! affects footer*/
     .desktop{

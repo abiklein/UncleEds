@@ -34,7 +34,30 @@
 
 </head>
 <body>
-<header>
+<header class="mobile">
+    <nav class="mobilenav">
+        <div class="notifications"></div>
+        <div class="navigation-links">
+            <div class="lnav-left">
+                <a class="lnav-l-link" href="index.html">
+                    <div class="lnav-l-imgbox">
+                        <!--either img or svg tag, preferrably svg-->
+                    </div>
+                </a>
+            </div>
+            <div class="lnav-right">
+                <ul role="menubar" class="lnav-r-menubar">
+                    <li role="none" class="lnav-rlist-item">
+                        <div role="menuitem" class="lnav-r-item">
+                            <a class="lnav-r-link" href="" ></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<header class="desktop">
     <a></a>
     <nav class="mastnav">
         <div class="master-navbar">
@@ -163,27 +186,6 @@
             </div>
         </div>
     </nav>
-    <nav class="mobilenav">
-        <div class="notifications"></div>
-        <div class="navigation-links">
-            <div class="lnav-left">
-                <a class="lnav-l-link" href="index.html">
-                    <div class="lnav-l-imgbox">
-                        <!--either img or svg tag, preferrably svg-->
-                    </div>
-                </a>
-            </div>
-            <div class="lnav-right">
-                <ul role="menubar" class="lnav-r-menubar">
-                    <li role="none" class="lnav-rlist-item">
-                        <div role="menuitem" class="lnav-r-item">
-                            <a class="lnav-r-link" href="" ></a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
     <script>
         let prevScrollpos = window.scrollY;
         window.onscroll = function() {
@@ -295,7 +297,7 @@
         <div class="e-spacer"></div>
     </div>
 </main>
-<footer>
+<footer class="desktop">
     <div>
         <ul class="foot">
             <li class="foot-ue-bbq">
@@ -336,5 +338,6 @@
         </ul>
     </div>
 </footer>
+<footer class="mobile"></footer>
 </body>
 </html>

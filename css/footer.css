@@ -115,5 +115,22 @@ footer li *{
     max-width: 200px;
 }
 
+/*--------------------------------------------------------*/
+/*Media sizes*/
+/*smaller desktop*/
+@media only screen and (min-width: 1008px) and (max-width: 2100px){
+
+
+}
+/*tablet*/
+@media only screen and (min-width: 641px) and (max-width: 1007px){
+
+
+}
+/*phone*/
+@media only screen and (max-width: 640px){
+
+}
+
 
 

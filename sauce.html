@@ -48,7 +48,30 @@
 
 </head>
 <body>
-<header>
+<header class="mobile">
+    <nav class="mobilenav">
+        <div class="notifications"></div>
+        <div class="navigation-links">
+            <div class="lnav-left">
+                <a class="lnav-l-link" href="index.html">
+                    <div class="lnav-l-imgbox">
+                        <!--either img or svg tag, preferrably svg-->
+                    </div>
+                </a>
+            </div>
+            <div class="lnav-right">
+                <ul role="menubar" class="lnav-r-menubar">
+                    <li role="none" class="lnav-rlist-item">
+                        <div role="menuitem" class="lnav-r-item">
+                            <a class="lnav-r-link" href="" ></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<header class="desktop">
     <a></a>
     <nav class="mastnav">
         <div class="master-navbar">
@@ -168,30 +191,9 @@
                         <div role="menuitem" class="lnav-r-item">
                             <a class="lnav-r-link" href="cart.html" >
                                 <div>
-                                    <img src="media/nav/cart.png" alt="cart icon" onmouseout="this.src= 'media/nav/cart.png';" onmouseover="this.src= 'media/nav/cart-active.png';" >
+                                    <img src="media/nav/cart.png" alt="cart icon" onmouseout="this.src='media/nav/cart.png';" onmouseover="this.src='media/nav/cart-active.png';" >
                                 </div>
                             </a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <nav class="mobilenav">
-        <div class="notifications"></div>
-        <div class="navigation-links">
-            <div class="lnav-left">
-                <a class="lnav-l-link" href="index.html">
-                    <div class="lnav-l-imgbox">
-                        <!--either img or svg tag, preferrably svg-->
-                    </div>
-                </a>
-            </div>
-            <div class="lnav-right">
-                <ul role="menubar" class="lnav-r-menubar">
-                    <li role="none" class="lnav-rlist-item">
-                        <div role="menuitem" class="lnav-r-item">
-                            <a class="lnav-r-link" href="" ></a>
                         </div>
                     </li>
                 </ul>
@@ -355,7 +357,7 @@
             </div>
     </div>
 </main>
-<footer>
+<footer class="desktop">
     <div>
         <ul class="foot">
             <li class="foot-ue-bbq">
@@ -380,7 +382,7 @@
                     <ul class="c-s-list">
                         <li class="c-s-l-item" id="email"><span class="normText">&ensp;iamribman@gmail.com</span></li>
                         <li class="c-s-l-item" id="phone"><span class="normText">&ensp;(262) 295 - 5253</span></li>
-                        <li class="c-s-l-item" id="fb"><span class="normText">&ensp;See the Most Recent News!</span></li>
+                        <li class="c-s-l-item" id="fb"><span class="normText">&ensp;See our page on Facebook!</span></li>
                     </ul>
                 </div>
             </li>
@@ -396,5 +398,6 @@
         </ul>
     </div>
 </footer>
+<footer class="mobile"></footer>
 </body>
 </html>
