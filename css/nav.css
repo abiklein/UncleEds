@@ -60,7 +60,7 @@ html{
     box-sizing: border-box;
 }
 h5{
-    color:#FF5E00;
+    color:#E87B2E;
     font-size: 16px;
 }
 h6{
@@ -130,7 +130,7 @@ header{
 .notifications{
     margin: 0;
     padding: 0;
-    background-color: #FF5E00;
+    background-color: #E87B2E;
     width: inherit;
     height: 30px;
     position: relative;
@@ -230,11 +230,11 @@ header{
     width: 100%;
     bottom: 50px;
     position: absolute;
-    color: #FF5E00;
+    color: #E87B2E;
 }
 .n-b-db-content-btn{
     text-decoration: none;
-    color: #FF5E00;
+    color: #E87B2E;
 }
 .n-b-db-content-btn:hover{
     text-decoration: underline;
@@ -242,7 +242,7 @@ header{
 }
 .n-b-db-content-btn:visited{
     text-decoration: none;
-    color: #FF5E00;
+    color: #E87B2E;
 }
 #n-b-db-fair{
     text-align: left;
@@ -285,7 +285,7 @@ header{
 }
 .lnav-left li a{
     display: block;
-    color: #FF5E00;
+    color: #E87B2E;
     text-align: center;
     padding: 7px 16px;
     text-decoration: none;
@@ -323,7 +323,7 @@ header{
 }
 .lnav-right li a:hover{
     text-decoration: underline;
-    color:#FF5E00;
+    color:#E87B2E;
     transition: 0.4s;
 }
 .lnav-right li a:visited{

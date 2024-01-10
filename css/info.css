@@ -1,10 +1,12 @@
 /*
  Color scheme:
- #FF5E00
+ #FF5E00 //replace with  #E87B2E
+
  #332929
  #FFA200
  #DC4B00
  #1B1616 Dark Brown
+ #cc5717
 
  font-family: 'Coustard', serif;
  400-Regular
@@ -54,6 +56,14 @@ Source: https://learn.microsoft.com/en-us/windows/apps/design/layout/screen-size
   */
 html{
     position: relative;
+}
+h2{
+    color: #E87B2E;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    padding: 0;
+    margin: 30px 0 0 0;
 }
 main{
     margin-top: 90px;
@@ -193,8 +203,8 @@ main{
 /*--------------------------------------------------------*/
 /*ingredient cards*/
 .ingredient-cards{
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     top: 0;
     position: fixed;
     background-color: rgba(60, 60, 60, 0.5);
@@ -203,19 +213,20 @@ main{
 }
 .card{
     position: fixed;
-    top: 30%;
+    top: 20%;
     right: 45%;
     display: none;
     background-color: white;
     width: 460px;
-    height: 560px;
+    height: 70%;
+    min-height: 300px;
+    max-height: 560px;
     padding: 30px;
     text-align: center;
 }
 .card img{
-
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
 }
 .card h4{
     text-align: center;
@@ -325,10 +336,381 @@ main{
 }
 /*tablet*/
 @media only screen and (min-width: 641px) and (max-width: 1007px){
+    main{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        min-height: 0;
+        background-color: #1B1616;
+        gap: 0;
+    }
+    .sauce-landing{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 550px;
+        padding: 0 30px;
 
+        background-image: url("../media/info/background.png");
+        background-repeat: no-repeat;
+        background-size: 1600px;
+        background-position-x: center;
+    }
+    .s-l-info-txt{
+        min-width: 0;
+        max-width: 640px;
+        width: 100%;
+        max-height: 100%;
+        padding-top: 40px;
+    }
+    .s-l-info-txt p{
+        text-align: left;
+        padding: 0;
+        margin: 0;
+    }
+    .s-l-info-txt h4{
+        font-size: 30px;
+        font-family: 'Coustard', serif;
+        color: #ffffff;
+        text-align: left;
+        padding: 10px 0;
+        margin: 0;
+    }
+    .special-font{
+        font-family: 'Satisfy', cursive;
+        font-size: 40px;
+        padding-left: 5px;
+    }
+    .free-n-low{
+        color: #ffffff;
+        font-size: 12px;
+    }
+    .s-l-img{
+        display: none;
+    }
+    .s-l-spacer{
+        display: none;
+    }
+
+    /*--------------------------------------------------------*/
+    .sauce-info{
+        height: 600px;
+        width: 100%;
+        position: static;
+
+        display: flex;
+        flex-direction: column;
+        flex-flow: column;
+    }
+    .s-i-spacer{
+        display: none;
+    }
+    /*--------------------------------------------------------*/
+    /*nutritional label*/
+    .s-i-label{
+        max-height: 500px;
+        width: 100%;
+        text-align: center;
+    }
+    .s-i-label img{
+        margin-top: 40px;
+        height: 100%;
+    }
+    /*--------------------------------------------------------*/
+    /*ingredients*/
+    .s-i-ingredients-m {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    .s-i-i-txt-m {
+        padding: 0 30px;
+        color: rgba(215, 198, 190, 0.75);
+    }
+    .s-i-i-txt-m-color{
+        color: #8f817e;
+    }
+    .s-i-i-images-m {
+        width: 100%;
+        margin: 0 0 50px 0;
+        padding: 30px;
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        text-align: center;
+        gap: 30px;
+
+    }
+
+    .ingredient-m {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        border: none;
+        border-radius: 5px;
+        justify-content: start;
+        display: flex;
+        flex-direction: column;
+
+        width: 150px;
+        height: 200px;
+        /*height: 400px; open*/
+        background-color: #d7c6be;
+        transition: 0.3s ease-in-out; /vendorless fallback /
+        -o-transition: 0.3s ease-in; / opera /
+        -ms-transition: 0.3s ease-in; / IE 10 /
+        -moz-transition: 0.3s ease-in; / Firefox /
+        -webkit-transition: 0.3s ease-in; /safari and chrome /
+        transition-timing-function: inherit;
+    }
+    .ingredient-m:hover{
+        cursor: pointer;
+    }
+
+    .ingredient-m img {
+        background-color: #d7c6be;
+        padding: 0;
+        margin: 0;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+        width: 100%;
+        height: 150px;
+    }
+    .i-m-open{
+        display: none;
+        padding: 10px;
+    }
+    .i-m-open p{
+        text-align: left;
+        font-size: 14px;
+    }
+    .i-m-open h4{
+        padding: 10px 0;
+        margin: 0;
+    }
+    .plus-minus{
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 0;
+        padding: 0;
+        height: 50px;
+        width: 100%;
+
+        color: #332929;
+        background-color: #E87B2E;
+        font-size: 50px;
+        text-align: center;
+        line-height: 50px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        transition: 0.3s ease-in-out; /vendorless fallback /
+    -o-transition: 0.3s ease-in; / opera /
+    -ms-transition: 0.3s ease-in; / IE 10 /
+    -moz-transition: 0.3s ease-in; / Firefox /
+    -webkit-transition: 0.3s ease-in; /safari and chrome /
+    transition-timing-function: inherit;
+    }
+    #m-ketchup-minus, #m-water-minus, #m-brownSugar-minus, #m-honey-minus, #m-vinegar-minus, #m-worcestershire-minus,
+    #m-hotSauce-minus, #m-garlic-minus, #m-cornstarch-minus, #m-spices-minus{
+        display: none;
+    }
+    #m-hotSauce-o p{
+        font-size: 13px;
+    }
 
 }
 /*phone*/
 @media only screen and (max-width: 640px){
+    main{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        min-height: 0;
+        background-color: #1B1616;
+        gap: 0;
+    }
+    .sauce-landing{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 550px;
+        padding: 0 30px;
+
+        background-image: url("../media/info/background.png");
+        background-repeat: no-repeat;
+        background-size: 1600px;
+        background-position-x: center;
+    }
+    .s-l-info-txt{
+        min-width: 0;
+        max-width: 640px;
+        width: 100%;
+        max-height: 100%;
+        padding-top: 40px;
+    }
+    .s-l-info-txt p{
+        text-align: left;
+        padding: 0;
+        margin: 0;
+    }
+    .s-l-info-txt h4{
+        font-size: 30px;
+        font-family: 'Coustard', serif;
+        color: #ffffff;
+        text-align: left;
+        padding: 10px 0;
+        margin: 0;
+    }
+    .special-font{
+        font-family: 'Satisfy', cursive;
+        font-size: 40px;
+        padding-left: 5px;
+    }
+    .free-n-low{
+        color: #ffffff;
+        font-size: 12px;
+    }
+    .s-l-img{
+        display: none;
+    }
+    .s-l-spacer{
+        display: none;
+    }
+
+    /*--------------------------------------------------------*/
+    .sauce-info{
+        height: 600px;
+        width: 100%;
+        position: static;
+
+        display: flex;
+        flex-direction: column;
+        flex-flow: column;
+    }
+    .s-i-spacer{
+        display: none;
+    }
+    /*--------------------------------------------------------*/
+    /*nutritional label*/
+    .s-i-label{
+        max-height: 500px;
+        width: 100%;
+        text-align: center;
+    }
+    .s-i-label img{
+        margin-top: 40px;
+        height: 100%;
+    }
+    /*--------------------------------------------------------*/
+    /*ingredients*/
+    .s-i-ingredients-m {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    .s-i-i-txt-m {
+        padding: 0 30px;
+        color: rgba(215, 198, 190, 0.75);
+    }
+    .s-i-i-txt-m-color{
+        color: #8f817e;
+    }
+    .s-i-i-images-m {
+        width: 100%;
+        margin: 0 0 50px 0;
+        padding: 30px;
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        text-align: center;
+        gap: 30px calc(100% - 300px);
+
+    }
+
+    .ingredient-m {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        border: none;
+        border-radius: 5px;
+        justify-content: start;
+        display: flex;
+        flex-direction: column;
+
+        width: 150px;
+        height: 200px;
+        /*height: 400px; open*/
+        background-color: #d7c6be;
+        transition: 0.3s ease-in-out; /vendorless fallback /
+        -o-transition: 0.3s ease-in; / opera /
+        -ms-transition: 0.3s ease-in; / IE 10 /
+        -moz-transition: 0.3s ease-in; / Firefox /
+        -webkit-transition: 0.3s ease-in; /safari and chrome /
+        transition-timing-function: inherit;
+    }
+    .ingredient-m:hover{
+        cursor: pointer;
+    }
+
+    .ingredient-m img {
+        background-color: #d7c6be;
+        padding: 0;
+        margin: 0;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+        width: 100%;
+        height: 150px;
+    }
+    .i-m-open{
+        display: none;
+        padding: 10px;
+    }
+    .i-m-open p{
+        text-align: left;
+        font-size: 14px;
+    }
+    .i-m-open h4{
+        padding: 10px 0;
+        margin: 0;
+    }
+    .plus-minus{
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 0;
+        padding: 0;
+        height: 50px;
+        width: 100%;
+
+        color: #332929;
+        background-color: #E87B2E;
+        font-size: 50px;
+        text-align: center;
+        line-height: 50px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        transition: 0.3s ease-in-out; /vendorless fallback /
+        -o-transition: 0.3s ease-in; / opera /
+        -ms-transition: 0.3s ease-in; / IE 10 /
+        -moz-transition: 0.3s ease-in; / Firefox /
+        -webkit-transition: 0.3s ease-in; /safari and chrome /
+        transition-timing-function: inherit;
+    }
+    #m-ketchup-minus, #m-water-minus, #m-brownSugar-minus, #m-honey-minus, #m-vinegar-minus, #m-worcestershire-minus,
+    #m-hotSauce-minus, #m-garlic-minus, #m-cornstarch-minus, #m-spices-minus{
+        display: none;
+    }
+    #m-hotSauce-o p{
+        font-size: 13px;
+    }
 
 }

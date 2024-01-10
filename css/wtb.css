@@ -67,7 +67,7 @@ html{
     gap: 0;
 }
 main{
-    margin-top: 90px;
+    margin-top: 0;
     grid-template-areas:
     "land land land land land"
    "ban ban ban ban ban"

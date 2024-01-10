@@ -44,6 +44,24 @@
                 divs[i].style.display="none";
             }
         }
+
+        function mobileOpen(clickID) {
+            let descriptionID = clickID + "-o";
+            let minusBtn = clickID + "-minus";
+            if(document.getElementById(clickID).style.height === "450px"){
+                document.getElementById(clickID).style.height = "200px";
+                document.getElementById(descriptionID).style.display = "none";
+                document.getElementById(minusBtn).style.display = "none";
+            }
+            else{
+                document.getElementById(clickID).style.height = "450px";
+                document.getElementById(minusBtn).style.display = "block";
+                setTimeout(function (){
+                    document.getElementById(descriptionID).style.display = "block";
+                }, 150);
+            }
+
+        }
     </script>
 
 </head>
@@ -243,7 +261,7 @@
         <div class="s-i-label">
             <img alt="Nutritional Label" src="media/info/nutritional_label.png">
         </div>
-        <div class="s-i-ingredients">
+        <div class="s-i-ingredients desktop">
             <div class="s-i-i-images">
                 <button class="ingredient" id="ketchup" onclick="cardDisplay(this.id)">
                     <img alt="" src="media/info/ketchup.png">
@@ -293,7 +311,7 @@
         </div>
         <div class="s-i-spacer"></div>
     </div>
-    <div class="ingredient-cards" id="ingredient-cards" onclick="cardHide()">
+    <div class="ingredient-cards desktop" id="ingredient-cards" onclick="cardHide()">
             <div class="card" id="c-ketchup">
                 <button class="x" onclick="cardHide(this.id.parentNode)">X</button>
                 <img alt="Heinz Ketchup" src="media/info/card_ketchup.jpg">
@@ -355,6 +373,121 @@
                 <h4>Various Spices</h4>
                 <p>Fact</p>
             </div>
+    </div>
+    <div class="s-i-ingredients-m mobile">
+        <div class="s-i-i-txt-m">
+            <h2 class="uppercase left">INGREDIENTS LIST</h2>
+            <p class="uppercase left s-i-i-txt-m-color">
+                NO ARTIFICIAL FLAVORS OR COLORING.
+            </p>
+            <div class="uppercase left">
+                <ul>
+                    <li><b>KETCHUP</b> <span class="s-i-i-txt-m-color">(TOMATO PASTE, DISTILLED VINEGAR, CORN SYRUP, SALT, ONION POWDER, SPICE, NATURAL FLAVOR)</span></li>
+                    <li><b>WATER</b></li>
+                    <li><b>BROWN SUGAR</b></li>
+                    <li><b>REAL HONEY</b></li>
+                    <li><b>VINEGAR</b></li>
+                    <li><b>WORCESTERSHIRE SAUCE</b> <span class="s-i-i-txt-m-color">(WATER, VINEGAR, SOYA, SPICES, VEGETABLE PROTEINS, TAMARINDS, ANCHOVIES, SUGAR, SALT)</span></li>
+                    <li><b>HOT SAUCE</b> <span class="s-i-i-txt-m-color">(VINEGAR, RED PEPPER, SALT)</span></li>
+                    <li><b>GARLIC</b></li>
+                    <li><b>CORN STARCH</b></li>
+                    <li><b>SPICES</b></li>
+                </ul>
+            </div>
+        </div>
+        <div class="s-i-i-images-m">
+            <a class="ingredient-m" id="m-ketchup" onclick="mobileOpen(this.id)">
+                <img alt="Heinz Ketchup" src="media/info/card_ketchup.jpg">
+                <div class="i-m-open" id="m-ketchup-o">
+                    <h4>Heinz Ketchup</h4>
+                    <p>Fact</p>
+                </div>
+                <div class="plus-minus plus">+</div>
+                <div class="plus-minus" id="m-ketchup-minus">-</div>
+            </a>
+            <a class="ingredient-m" id="m-water" role="button" onclick="mobileOpen(this.id)">
+                <img alt="" src="media/info/water.jpg">
+                <div class="i-m-open" id="m-water-o">
+                    <h4>Water</h4>
+                    <p>Good ol' H2O.</p>
+                </div>
+                <div class="plus-minus plus">+</div>
+                <div class="plus-minus" id="m-water-minus">-</div>
+            </a>
+            <a class="ingredient-m" id="m-brownSugar" role="button" onclick="mobileOpen(this.id)">
+                <img alt="" src="media/info/brown_sugar.jpg">
+                <div class="i-m-open" id="m-brownSugar-o">
+                    <h4>Brown Sugar</h4>
+                    <p>Fact</p>
+                </div>
+                <div class="plus-minus plus">+</div>
+                <div class="plus-minus" id="m-brownSugar-minus">-</div>
+            </a>
+            <a class="ingredient-m" id="m-honey" role="button" onclick="mobileOpen(this.id)">
+                <img alt="Honey" src="media/info/card_honey.jpg">
+                <div class="i-m-open" id="m-honey-o">
+                    <h4>Honey</h4>
+                    <p>Locally sourced honey from the hardworking bees and their keepers at ---- Farms is used in our sauce.</p>
+                </div>
+                <div class="plus-minus plus">+</div>
+                <div class="plus-minus" id="m-honey-minus">-</div>
+            </a>
+            <a class="ingredient-m" id="m-vinegar" role="button" onclick="mobileOpen(this.id)">
+                <img alt="Vinegar" src="">
+                <div class="i-m-open" id="m-vinegar-o">
+                    <h4>Distilled White Vinegar</h4>
+                    <p>Fact</p>
+                </div>
+                <div class="plus-minus plus">+</div>
+                <div class="plus-minus" id="m-vinegar-minus">-</div>
+            </a>
+            <a class="ingredient-m" id="m-worcestershire" role="button" onclick="mobileOpen(this.id)">
+                <img alt="" src="">
+                <div class="i-m-open" id="m-worcestershire-o">
+                    <h4>Worcestershire Sauce</h4>
+                    <p>Worsheshire—no, worster- worcestershire. There. A very difficult-to-pronounce-and-spell sauce is in the jar too.</p>
+                </div>
+                <div class="plus-minus plus">+</div>
+                <div class="plus-minus" id="m-worcestershire-minus">-</div>
+            </a>
+            <a class="ingredient-m" id="m-hotSauce" role="button" onclick="mobileOpen(this.id)">
+                <img alt="Frank's Red Hot Sauce" src="">
+                <div class="i-m-open" id="m-hotSauce-o">
+                    <h4>Frank's Red Hot Sauce</h4>
+                    <p>We use Frank's Red Hot Sauce to add just a bit of a bite. Don't worry though!
+                        Our sauce doesn't bite too hard. The honey helps by providing a sweet aftertaste.</p>
+                </div>
+                <div class="plus-minus plus">+</div>
+                <div class="plus-minus" id="m-hotSauce-minus">-</div>
+            </a>
+            <a class="ingredient-m" id="m-garlic" role="button" onclick="mobileOpen(this.id)">
+                <img alt="" src="media/info/garlic.jpg">
+                <div class="i-m-open" id="m-garlic-o">
+                    <h4>Garlic</h4>
+                    <p>We <em>clove</em> our visitors, and we hope you <em>gar-lic</em> what we bring to the table!</p>
+                </div>
+                <div class="plus-minus plus">+</div>
+                <div class="plus-minus" id="m-garlic-minus">-</div>
+            </a>
+            <a class="ingredient-m" id="m-cornstarch" role="button" onclick="mobileOpen(this.id)">
+                <img alt="" src="media/info/cornstarch.png">
+                <div class="i-m-open" id="m-cornstarch-o">
+                    <h4>Cornstarch</h4>
+                    <p>Fact</p>
+                </div>
+                <div class="plus-minus plus">+</div>
+                <div class="plus-minus" id="m-cornstarch-minus">-</div>
+            </a>
+            <a class="ingredient-m" id="m-spices" role="button" onclick="mobileOpen(this.id)">
+                <img alt="" src="media/info/spices_mobile.png">
+                <div class="i-m-open" id="m-spices-o">
+                    <h4>Various Spices</h4>
+                    <p>Fact</p>
+                </div>
+                <div class="plus-minus plus">+</div>
+                <div class="plus-minus" id="m-spices-minus">-</div>
+            </a>
+        </div>
     </div>
 </main>
 <footer class="desktop">
