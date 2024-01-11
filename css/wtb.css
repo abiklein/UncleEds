@@ -1,6 +1,6 @@
 /*
  Color scheme:
- #FF5E00
+ #E87B2E
  #332929
  #FFA200
  #DC4B00
@@ -27,19 +27,19 @@ h1{
     1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
 }
 h2{
-    color: #FF5E00;
+    color: #E87B2E;
     font-weight: 700;
     font-size: 30px;
 }
 h3{
-    color: #FF5E00;
+    color: #E87B2E;
     letter-spacing: 2px;
 }
 h4{
     //////
 }
 h5{
-    color:#FF5E00;
+    color:#E87B2E;
     font-size: 16px;
 }
 h6{
@@ -61,6 +61,7 @@ Source: https://learn.microsoft.com/en-us/windows/apps/design/layout/screen-size
   */
 html{
     position: relative;
+    background-color: #1B1616;
 }
 .wtb-land, .our-products-banner, .partners, .wtb-filter, .wtb-products{
     margin: 0;
@@ -89,7 +90,6 @@ main{
     width: 100%;
     height: 100%;
     object-fit: cover;
-
 }
 /*text - landing*/
 .wtb-land-overlay{
@@ -98,6 +98,7 @@ main{
     position: absolute;
     width: 100vw;
     height: 60vh;
+    top: 100px;
     align-items: center;
 }
 .wtb-land-txt{
@@ -115,7 +116,9 @@ main{
 .wtb-land-txt-btns{
     display: flex;
     flex-direction: row;
-    width: 30%;
+    width: 50%;
+    min-width: 500px;
+    max-width: 550px;
     margin-top: 40px;
 }
 .wtb-land-txt p{
@@ -133,11 +136,19 @@ main{
     padding: 10px 5px 10px 5px;
     margin: 0;
     border: 2px solid #d7c6be;
+
+    transition: 0.2s ease-in-out; /* vendorless fallback */
+    -o-transition: 0.2s ease-in; /* opera */
+    -ms-transition: 0.2s ease-in; /* IE 10 */
+    -moz-transition: 0.2s ease-in; /* Firefox */
+    -webkit-transition: 0.2s ease-in; /*safari and chrome */
 }
 .wtb-land-txt-single-btn a:hover{
     font-size: 25px;
     font-weight: 500;
     text-decoration: none;
+    background-color: #E87B2E;
+    border: 2px solid #cc5717;
 }
 .wtb-land-txt-single-btn a:visited{
     font-size: 25px;
@@ -149,10 +160,12 @@ main{
     width: 50%;
 }
 #wtb-land-text-btn-left{
+    align-self: flex-start;
     text-align: left;
 }
 #wtb-land-text-btn-right{
     text-align: right;
+    align-self: flex-end;
 }
 
 /*-------------------------------------------------------------------*/
@@ -201,10 +214,10 @@ main{
 }
 .p-txt-content h1 {
     text-align: left;
-    color: #d03a00;
+    color: #cc5717;
     font-family: 'Coustard', serif;
     text-shadow: 2px 0 black, -2px 0 black, 0 3px black, 0 -2px black,
-    1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+    1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
     margin: 0;
 }
 .p-txt-content p {
@@ -255,6 +268,7 @@ main{
     border: black 2px solid;
     margin: 30px 20px 0 0;
     font-size: 16px;
+    border-radius: 10px;
 
     transition: 0.3s ease-in-out; /* vendorless fallback */
     -o-transition: 0.3s ease-in; /* opera */
@@ -265,8 +279,8 @@ main{
 .pig-address:hover{
 
     color: #1B1616;
-    background-color: #ff6428;
-    border: red 3px solid;
+    background-color: #E87B2E;
+    border: #cc5717 3px solid;
     margin: 30px 20px 0 0;
     font-size: 18px;
 }
@@ -304,7 +318,7 @@ main{
 }
 .our-products-banner{
     height: 150px;
-    background-color: #d03a00;
+    background-color: #E87B2E;
     grid-area: prod;
     text-align: center;
 }
@@ -320,7 +334,7 @@ main{
 
 .wtb-filter{
     height: 45px;
-    background-color: #a42d00;
+    background-color: #cc5717;
     grid-area: nav;
     text-align: center;
 }
@@ -330,10 +344,10 @@ main{
 .wtb-filter-btns button{
     margin-top: 10px;
     margin-left: 80px;
-    background-color: #a42d00;
-    border: 2px solid #FF5E00;
+    background-color: #cc5717;
+    border: 2px solid #E87B2E;
     font-weight: 500;
-    color: #FF5E00;
+    color: #E87B2E;
 
     transition: 0.2s e; /* vendorless fallback */
     -o-transition: 0.2s ease-in; /* opera */
@@ -343,7 +357,7 @@ main{
 }
 .wtb-filter-btns button:hover{
     color: #332929;
-    background-color: #FF5E00;
+    background-color: #E87B2E;
     cursor: pointer;
 
 }
@@ -409,8 +423,8 @@ main{
     width: 100%;
     padding: 5px;
     margin-top: 20px;
-    border: #FF5E00 2px solid;
-    color: #FF5E00;
+    border: #E87B2E 2px solid;
+    color: #E87B2E;
 
     transition: 0.3s ease-in-out; /* vendorless fallback */
     -o-transition: 0.3s ease-in; /* opera */
@@ -419,12 +433,37 @@ main{
     -webkit-transition: 0.3s ease-in; /*safari and chrome */
 }
 .add-to-cart:hover{
-    background-color: #DC4B00;
+    background-color: #cc5717;
     border-radius: 5px;
     width: 100%;
     padding: 5px;
     margin-top: 20px;
-    border: #FF5E00 2px solid;
+    border: #E87B2E 2px solid;
     color: #ffffff;
     cursor: pointer;
+}
+
+/*--------------------------------------------------------*/
+/*Media sizes*/
+/*smaller desktop*/
+@media only screen and (min-width: 1008px) and (max-width: 2100px){
+    #wtbLandImg{
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+        opacity: 50%;
+    }
+    #wtbLandImg img{
+        opacity: 50%;
+    }
+
+}
+/*tablet*/
+@media only screen and (min-width: 641px) and (max-width: 1007px){
+
+
+}
+/*phone*/
+@media only screen and (max-width: 640px){
+
 }

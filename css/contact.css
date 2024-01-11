@@ -1,6 +1,6 @@
 /*
  Color scheme:
- #FF5E00
+ #E87B2E
  #332929
  #FFA200
  #DC4B00
@@ -27,19 +27,19 @@ h1{
     1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
 }
 h2{
-    color: #FF5E00;
+    color: #E87B2E;
     font-weight: 700;
     font-size: 30px;
 }
 h3{
     letter-spacing: 2px;
-    color: #FF5E00;
+    color: #E87B2E;
 }
 h4{
     //////
 }
 h5{
-    color:#FF5E00;
+    color:#E87B2E;
     font-size: 16px;
 }
 h6{
@@ -67,25 +67,25 @@ main{
 h1{
     font-size: 30px;
     font-family: 'Coustard', serif;
-    color: #FF5E00;
+    color: #E87B2E;
     text-shadow: 2px 0 #332929, -2px 0 #332929, 0 2px #332929, 0 -2px #332929,
     1px 1px #332929, -1px -1px #332929, 1px -1px #332929, -1px 1px #332929;
     letter-spacing: 1px;
 }
 h2{
-    color: #FF5E00;
+    color: #E87B2E;
     font-weight: 700;
     font-size: 30px;
 }
 h3{
-    color: #FF5E00;
+    color: #E87B2E;
     letter-spacing: 2px;
 }
 p, a{
     font-size: 16px;
 }
 a{
-    color: #FF5E00;
+    color: #E87B2E;
     text-decoration: none;
 }
 a:visited{

@@ -1,6 +1,6 @@
 /*
  Color scheme:
- #FF5E00 Bright Orange (standard)
+ #E87B2E Bright Orange (standard)
  #DC4B00 Dark Orange (1st Accent)
  #FFA200 Yellow/Orange (2nd Accent)
  #332929 Light Brown
@@ -28,19 +28,19 @@ h1{
     1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
 }
 h2{
-    color: #FF5E00;
+    color: #E87B2E;
     font-weight: 700;
     font-size: 30px;
 }
 h3{
     letter-spacing: 2px;
-    color: #FF5E00;
+    color: #E87B2E;
 }
 h4{
     //////
 }
 h5{
-    color:#FF5E00;
+    color:#E87B2E;
     font-size: 16px;
 }
 h6{
@@ -65,11 +65,11 @@ main p{
     text-align: left;
 }
 main small{
-    color: #DC4B00;
+    color: #cc5717;
     text-transform: uppercase;
 }
 h2{
-    color: #FF5E00;
+    color: #E87B2E;
     font-weight: 700;
     font-size: 30px;
     padding: 0;
@@ -123,7 +123,6 @@ main a:visited{
     display: flex;
     flex-direction: row;
     gap: 0;
-    background-color: #4267B2;
     margin-right: 50px;
     width: 35%;
     height: 100%;
@@ -137,7 +136,7 @@ main a:visited{
     padding: 50px 0 20px 20px;
 }
 .month, .year{
-    color: #FF5E00;
+    color: #E87B2E;
     font-weight: 300;
     font-size: 22px;
     text-transform: uppercase;
@@ -177,9 +176,9 @@ main a:visited{
 }
 .more-info, .calendar{
     margin: 10px;
-    color: #FF5E00;
+    color: #E87B2E;
     background-color: #1B1616;
-    border: #FF5E00 2px solid;
+    border: #E87B2E 2px solid;
     border-radius: 12px;
     width: 50%;
     height: 50px;
@@ -193,8 +192,8 @@ main a:visited{
 .more-info:hover, .calendar:hover{
     margin: 10px;
     color: #d7c6be;
-    background-color: #d03a00;
-    border: #FF5E00 2px solid;
+    background-color: #a42d00;
+    border: #E87B2E 2px solid;
     border-radius: 12px;
     width: 50%;
     height: 50px;
@@ -216,7 +215,7 @@ main a:visited{
     text-align: center;
 }
 .link-to-top{
-    color: #FF5E00;
+    color: #E87B2E;
     text-decoration: none;
 }
 .link-to-top:visited{
@@ -246,7 +245,7 @@ main a:visited{
         margin-top: 0;
     }
     h2{
-        color: #FF5E00;
+        color: #E87B2E;
         font-weight: 700;
         font-size: 25px;
         padding-bottom: 5px;

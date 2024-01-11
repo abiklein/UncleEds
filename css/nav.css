@@ -1,6 +1,6 @@
 /*
 Color scheme:
-#FF5E00
+#E87B2E
 #332929
 #FFA200
 #DC4B00
@@ -26,19 +26,19 @@ h1{
     1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
 }
 h2{
-    color: #FF5E00;
+    color: #E87B2E;
     font-weight: 700;
     font-size: 30px;
 }
 h3{
-    color: #FF5E00;
+    color: #E87B2E;
     letter-spacing: 2px;
 }
 h4{
     //////
 }
 h5{
-    color:#FF5E00;
+    color:#E87B2E;
     font-size: 16px;
 }
 h6{

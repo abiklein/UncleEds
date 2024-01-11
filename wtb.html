@@ -32,7 +32,7 @@
         function filterSelection(c) {
             let x, i;
             x = document.getElementsByClassName("filterDiv");
-            if (c == "all") c = "";
+            if (c === "all") c = "";
             for (i = 0; i < x.length; i++) {
                 w3RemoveClass(x[i], "show");
                 if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
@@ -44,7 +44,7 @@
             arr1 = element.className.split(" ");
             arr2 = name.split(" ");
             for (i = 0; i < arr2.length; i++) {
-                if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+                if (arr1.indexOf(arr2[i]) === -1) {element.className += " " + arr2[i];}
             }
         }
 
@@ -246,6 +246,7 @@
 </header>
 <main>
     <div class="wtb-land">
+        <img src="media/wtb/wtb_landing.png" alt="Landing Image" id="wtbLandImg">
         <div class="wtb-land-overlay">
             <div class="wtb-land-txt">
                 <p>From our kitchen <br> to your flaming grill!</p>
@@ -254,9 +255,8 @@
                     <div class="wtb-land-txt-single-btn" id="wtb-land-text-btn-right"><a href="#store">Shop Online</a></div>
                 </div>
             </div>
+            <div id="locations"></div>
         </div>
-        <div id="locations"></div>
-        <img src="media/wtb/wtb_landing.png" alt="Landing Image" id="wtbLandImg">
     </div>
     <div class="partners">
         <div class="spacer"></div>
