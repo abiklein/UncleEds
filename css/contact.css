@@ -124,13 +124,15 @@ a:hover{
 }
 #main-email{
     list-style-image: url('../media/footer/mail.svg');
+    font-weight: 500;
 }
 #main-phone{
     list-style-image: url('../media/footer/phone.svg');
+    font-weight: 500;
 }
 #main-fb{
-
     list-style-image: url('../media/Facebook-Brand-Asset-Pack/Facebook Brand Asset Pack/Logo/Primary Logo/Facebook_Logo_Primary.svg');
+    font-weight: 500;
 }
 #main-fb a{
     color: #4267B2;

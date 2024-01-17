@@ -51,6 +51,7 @@ Medium	| 641 - 1007px	| 7" to 12"	 | Tablets                   |	960x540
 Large	| 1008px and up	| 13" and up | PCs, Laptops, Surface Hub |	1024x640, 1366x768, 1920x1080
 Source: https://learn.microsoft.com/en-us/windows/apps/design/layout/screen-sizes-and-breakpoints-for-responsive-design
  */
+
 footer{
     position: absolute;
     background-color: #332929;
@@ -77,23 +78,26 @@ footer ul{
     list-style-type: none;
 }
 .foot{
-    padding: 20px 0px;
+    padding: 20px 0;
     margin: 0 10%;
     display: flex;
     align-items: stretch; /* Default */
     justify-content: space-between;
 }
 
-footer li *{
+footer li, footer *{
     text-align: left;
 }
+
 .c-s-list{
     line-height: 30px;
 }
 .c-s-l-item{
     font-size: 50px;
+    font-weight: 200;
     margin: 0;
     padding: 0;
+    letter-spacing: 1px;
 }
 #email{
     list-style-image: url('../media/footer/mail.svg');
@@ -111,8 +115,23 @@ footer li *{
     bottom: 6px;
 }
 #foot-img{
-    width: 10vw;
+    width: 30vw;
     max-width: 200px;
+}
+.madein-txt, .policies{
+    padding-top: 35px;
+    line-height: 37px;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+.contact-social-txt p{
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+.powers{
+    font-weight: 400;
+    font-family: 'Satisfy', cursive;
+    text-transform: uppercase;
 }
 
 /*--------------------------------------------------------*/
