@@ -63,6 +63,7 @@ main{
     display: flex;
     flex-direction: row;
     margin-top: 90px;
+    margin-bottom: 50px;
 }
 h1{
     font-size: 30px;
@@ -150,9 +151,11 @@ a:hover{
     text-align: left;
     width: 55%;
     padding-right: 10px;
+    min-width: 180px;
     max-width: 250px;
 }
 .a-address{
+    min-width: 180px;
     margin-left: 20px;
     width: 45%;
 }

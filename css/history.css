@@ -54,16 +54,18 @@ Source: https://learn.microsoft.com/en-us/windows/apps/design/layout/screen-size
   */
 html{
     position: relative;
+    background-color: #332929;
 }
 
 main{
     padding-top: 60px;
     width: 100%;
     text-align: left;
-    overflow: hidden;
     background-image: url("../media/history/h-background.png");
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
+
 
     display: flex;
     flex-direction: row;

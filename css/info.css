@@ -461,11 +461,11 @@ main{
         height: 200px;
         /*height: 400px; open*/
         background-color: #d7c6be;
-        transition: 0.3s ease-in-out; /vendorless fallback /
-        -o-transition: 0.3s ease-in; / opera /
-        -ms-transition: 0.3s ease-in; / IE 10 /
-        -moz-transition: 0.3s ease-in; / Firefox /
-        -webkit-transition: 0.3s ease-in; /safari and chrome /
+        transition: 0.3s ease-in-out; /*vendorless fallback */
+        -o-transition: 0.3s ease-in; /* opera */
+        -ms-transition: 0.3s ease-in; /* IE 10 */
+        -moz-transition: 0.3s ease-in; /* Firefox */
+        -webkit-transition: 0.3s ease-in; /*safari and chrome */
         transition-timing-function: inherit;
     }
     .ingredient-m:hover{
@@ -510,12 +510,12 @@ main{
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
 
-        transition: 0.3s ease-in-out; /vendorless fallback /
-    -o-transition: 0.3s ease-in; / opera /
-    -ms-transition: 0.3s ease-in; / IE 10 /
-    -moz-transition: 0.3s ease-in; / Firefox /
-    -webkit-transition: 0.3s ease-in; /safari and chrome /
-    transition-timing-function: inherit;
+        transition: 0.3s ease-in-out; /*vendorless fallback */
+        -o-transition: 0.3s ease-in; /* opera */
+        -ms-transition: 0.3s ease-in; /* IE 10 */
+        -moz-transition: 0.3s ease-in; /* Firefox */
+        -webkit-transition: 0.3s ease-in; /*safari and chrome */
+        transition-timing-function: inherit;
     }
     #m-ketchup-minus, #m-water-minus, #m-brownSugar-minus, #m-honey-minus, #m-vinegar-minus, #m-worcestershire-minus,
     #m-hotSauce-minus, #m-garlic-minus, #m-cornstarch-minus, #m-spices-minus{

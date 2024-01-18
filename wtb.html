@@ -17,14 +17,14 @@
     <link rel="stylesheet" href="css/footer.css">
 
     <!--Fonts-->
-    <!--COUSTARD-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--COUSTARD-->
     <link href="https://fonts.googleapis.com/css2?family=Coustard:wght@400;900&display=swap" rel="stylesheet">
     <!--POPPINS-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!--Satisfy-->
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
 
     <!--Scripts-->
     <script>
@@ -364,45 +364,86 @@
         <div class="spacer"></div>
     </div>
 </main>
-<footer>
+<footer class="desktop d-footer">
     <div>
-        <ul class="foot">
-            <li class="foot-ue-bbq">
-                <div>
+        <div class="foot">
+            <div class="foot-ue-bbq">
+                <div class="foot-ue-bbq-img">
                     <a href="index.html">
                         <div>
                             <img id="foot-img" src="media/footer/logo.png" alt="Uncle Ed's BBQ Grill Logo">
                         </div>
                     </a>
                 </div>
-            </li>
-            <li class="madein">
-                <div>
+            </div>
+            <div class="madein">
+                <div class="madein-txt">
                     <p>Made in</p>
-                    <a class="powers" href="#">Powers Lake</a><br/>
+                    <a class="powers" href="contact.html">Powers Lake</a><br/>
                     <p>Wisconsin</p>
                 </div>
-            </li>
-            <li class="contact-social">
-                <div>
-                    <p>Contact & Social Media</p>
+            </div>
+            <div class="contact-social">
+                <div class="contact-social-txt">
+                    <p><b>Contact & Social Media</b></p>
                     <ul class="c-s-list">
                         <li class="c-s-l-item" id="email"><span class="normText">&ensp;iamribman@gmail.com</span></li>
                         <li class="c-s-l-item" id="phone"><span class="normText">&ensp;(262) 295 - 5253</span></li>
                         <li class="c-s-l-item" id="fb"><span class="normText">&ensp;See our page on Facebook!</span></li>
                     </ul>
                 </div>
-            </li>
-            <li class="legal">
-                <div>
-                    <br/>
-                    <ul class="legal-list">
-                        <li class="terms"><a href="#">Terms</a></li>
-                        <li class="conditions"><a href="#">Conditions</a></li>
-                    </ul>
+            </div>
+            <div class="legal">
+                <div class="policies">
+                    <a class="p-terms" href="terms.html">Terms of Use</a><br/>
+                    <a class="p-privacy" href="privacy.html">Privacy Policy</a>
                 </div>
-            </li>
-        </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<footer class="mobile m-footer">
+    <div class="m-footer-flex">
+        <div class="m-f-head">
+            <img alt="Uncle Ed's Logo" src="media/footer/logo.png">
+            <p>Made in <a class="powers m-powers" href="contact.html">Powers Lake</a> Wisconsin</p>
+        </div>
+        <a class="m-foot-card" id="m-contact" onclick="mobileOpen(this.id)">
+            <div class="m-f-c-title">
+                <p class="m-f-c-t-txt">Contact</p>
+                <p class="plus-minus-foot plus">+</p>
+                <p class="plus-minus-foot" id="m-contact-minus">-</p>
+            </div>
+            <div class="i-m-open-foot" id="m-contact-o">
+                <ul class="c-s-list">
+                    <li class="c-s-l-item" id="m-email"><span class="normText">&ensp;iamribman@gmail.com</span></li>
+                    <li class="c-s-l-item" id="m-phone"><span class="normText">&ensp;(262) 295 - 5253</span></li>
+                    <li class="c-s-l-item" id="m-fb"><a class="normText" >&ensp;See our page on Facebook!</a></li>
+                </ul>
+            </div>
+        </a>
+        <a class="m-foot-card" id="m-address" onclick="mobileOpen(this.id)">
+            <div class="m-f-c-title">
+                <p class="m-f-c-t-txt">Address</p>
+                <p class="plus-minus-foot plus">+</p>
+                <p class="plus-minus-foot" id="m-address-minus">-</p>
+            </div>
+            <div class="i-m-open-foot" id="m-address-o">
+                <p>N1530 Powers Lake Rd<br/>Genoa City, WI 53128</p>
+                <a class="m-p-terms" href="#"></a><br/><br/>
+            </div>
+        </a>
+        <a class="m-foot-card" id="m-policy" onclick="mobileOpen(this.id)">
+            <div class="m-f-c-title">
+                <p class="m-f-c-t-txt">Policy</p>
+                <p class="plus-minus-foot plus">+</p>
+                <p class="plus-minus-foot" id="m-policy-minus">-</p>
+            </div>
+            <div class="i-m-open-foot" id="m-policy-o">
+                <a class="m-p-terms" href="terms.html">Terms of Use</a><br/><br/>
+                <a class="m-p-privacy" href="privacy.html">Privacy Policy</a>
+            </div>
+        </a>
     </div>
 </footer>
 </body>

@@ -52,32 +52,35 @@ Large	| 1008px and up	| 13" and up | PCs, Laptops, Surface Hub |	1024x640, 1366x
 Source: https://learn.microsoft.com/en-us/windows/apps/design/layout/screen-sizes-and-breakpoints-for-responsive-design
  */
 
-footer{
+.d-footer{
     position: absolute;
     background-color: #332929;
     color: white;
     text-align: left;
-    font-size: 14px;
+    font-size: 16px;
     width: 100vw;
-    height: 200px;
-    bottom: -200px;
+    height: 250px;
+    top: 100%;
+    padding: 25px 0;
+    overflow-x: clip;
 }
-footer a{
+.d-footer a{
     text-decoration: none;
     color: white;
 }
-footer a:hover{
+.d-footer a:hover{
     text-decoration: underline;
     cursor: pointer;
 }
-footer a:visited{
+.d-footer a:visited{
     text-decoration: none;
     color: white;
 }
-footer ul{
+.d-footer ul{
     list-style-type: none;
 }
 .foot{
+    max-width: 1008px;
     padding: 20px 0;
     margin: 0 10%;
     display: flex;
@@ -99,19 +102,19 @@ footer li, footer *{
     padding: 0;
     letter-spacing: 1px;
 }
-#email{
+#email, #m-email{
     list-style-image: url('../media/footer/mail.svg');
 }
-#phone{
+#phone, #m-phone{
     list-style-image: url('../media/footer/phone.svg');
 }
 
-#fb{
+#fb, #m-fb{
     list-style-image: url('../media/Facebook-Brand-Asset-Pack/Facebook Brand Asset Pack/Logo/Secondary Logo/Facebook_Logo_Secondary.svg');
 }
 .normText{
     position: relative;
-    font-size: 14px;
+    font-size: 16px;
     bottom: 6px;
 }
 #foot-img{
@@ -134,6 +137,136 @@ footer li, footer *{
     text-transform: uppercase;
 }
 
+/*--------------------------------------------------------*/
+/*--------------------------------------------------------*/
+/*Mobile Version*/
+.m-footer{
+    position: absolute;
+    top: 100%;
+    background-color: #332929;
+    color: #d7c6be;
+    text-align: left;
+    font-size: 18px;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    overflow-x: clip;
+    overflow-y: scroll;
+}
+.m-footer a{
+    text-decoration: none;
+    color: white;
+}
+.m-footer a:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
+.m-footer a:visited{
+    text-decoration: none;
+    color: white;
+}
+.m-footer-flex{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+}
+.m-f-head *, .m-f-head{
+    text-align: center;
+    font-size: 20px;
+}
+.m-f-head img{
+    min-width: 200px;
+    max-width: 300px;
+    padding: 0;
+    margin: 0;
+}
+.m-f-head p{
+    margin-bottom: 20px;
+}
+.m-powers{
+    font-size: 25px;
+}
+/*--------------------------------------------------------*/
+/*Dropdown Cards*/
+.m-foot-card{
+    height: 75px;
+    width: 100%;
+    background-color: #1B1616;
+    border-bottom: 2px solid #332929;
+}
+.m-f-c-title{
+    display: grid;
+    height: 100%;
+    width: 100%;
+}
+.m-f-c-t-txt{
+    font-size: 25px;
+    justify-self: center;
+    margin-top: 17px;
+    color: #d7c6be;
+}
+.i-m-open-foot{
+    color: #1B1616;
+    display: none;
+    padding: 10px;
+    background-color: #d7c6be;
+}
+
+.i-m-open-foot ul{
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 50px;
+}
+.i-m-open-foot li{
+    font-weight: 400;
+    color: #1B1616;
+}
+.i-m-open-foot p {
+    text-align: left;
+    font-size: 18px;
+    padding: 10px 30px;
+    color: #1B1616;
+}
+.m-p-terms, .m-p-privacy{
+    text-align: left;
+    font-size: 18px;
+    margin: 30px;
+    color: #1B1616 !important;
+}
+
+.plus-minus-foot{
+    position: absolute;
+    right: 0;
+    horiz-align: center;
+    margin: 15px 20px 0;
+    padding: 0;
+    height: 50px;
+    width: 40px;
+
+    color: #d7c6be;
+    font-size: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    transition: 0.3s ease-in-out; /*vendorless fallback */
+    -o-transition: 0.3s ease-in; /* opera */
+    -ms-transition: 0.3s ease-in; /* IE 10 */
+    -moz-transition: 0.3s ease-in; /* Firefox */
+    -webkit-transition: 0.3s ease-in; /*safari and chrome */
+    transition-timing-function: inherit;
+    }
+
+#m-contact-minus, #m-address-minus, #m-policy-minus{
+    display: none;
+    background-color: #1B1616;
+}
+
+/*--------------------------------------------------------*/
 /*--------------------------------------------------------*/
 /*Media sizes*/
 /*smaller desktop*/

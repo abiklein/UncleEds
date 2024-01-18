@@ -54,6 +54,7 @@ Source: https://learn.microsoft.com/en-us/windows/apps/design/layout/screen-size
 
 html{
     scroll-behavior: smooth;
+    overflow-x: clip;
 }
 *{
     font-family: 'Poppins', sans-serif;
