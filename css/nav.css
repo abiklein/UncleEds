@@ -55,6 +55,7 @@ Source: https://learn.microsoft.com/en-us/windows/apps/design/layout/screen-size
 html{
     scroll-behavior: smooth;
     overflow-x: clip;
+    background-color: #332929;
 }
 *{
     font-family: 'Poppins', sans-serif;
@@ -103,8 +104,9 @@ header{
 }
 .master-navbar{
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     height: inherit;
+    width: 100%;
 }
 .master-links{
     padding: 0;
@@ -123,8 +125,8 @@ header{
     height: 100%;
     object-fit: cover;
 }
-#watercraft{
-    margin-left: 20px;
+#bbq-home{
+    margin-right: 125px;
 }
 
 /*Upcoming Events bar (orange)*/
@@ -205,6 +207,18 @@ header{
     margin: 0;
     text-align: center;
 }
+.n-b-db-content a{
+    color: #E87B2E;
+    text-decoration: none;
+}
+.n-b-db-content a:hover{
+    color: #E87B2E;
+    text-decoration: underline;
+}
+.n-b-db-content a:visited{
+    text-decoration: none;
+    color: #E87B2E;
+}
 .n-b-db-content p{
     text-align:left;
     width: 25vw;
@@ -212,7 +226,7 @@ header{
     position: absolute;
     bottom: 70px;
 }
-.n-b-db-content h5, h6{
+.n-b-db-content h5, .n-b-db-content h6{
     width: 25vw;
     position: absolute;
 }
@@ -288,7 +302,7 @@ header{
 .lnav-left li{
     float: left;
 }
-.lnav-left li a{
+.lnav-left li, .lnav-left a{
     display: inline-block;
     color: #E87B2E;
     text-align: center;
@@ -300,10 +314,10 @@ header{
     font-weight: 900;
     letter-spacing: 2px;
 }
-.lnav-left li a:hover{
+.lnav-left li, .lnav-left a:hover{
     text-decoration: none;
 }
-.lnav-left li a:visited{
+.lnav-left li, .lnav-left a:visited{
     text-decoration: none;
 }
 /*local nav right links (brown)*/
@@ -339,6 +353,15 @@ header{
     width: 20px;
     height: auto;
 }
+.lnav-l-link{
+    position: absolute;
+    top: -20px;
+    left: 5%;
+    z-index: 200;
+}
+#lnav-l-link-img{
+    max-width: 200px;
+}
 
 /*--------------------------------------------------------*/
 /*--------------------------------------------------------*/
@@ -373,6 +396,7 @@ header{
 }
 .m-nav-c-img{
     display: grid;
+    text-align: center;
 }
 .m-nav-c-img img{
     max-width: 180px;
@@ -422,6 +446,7 @@ header{
     font-weight: 600;
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 .m-d-link:hover{
     cursor: pointer;
@@ -437,6 +462,8 @@ header{
     margin: 50px 30px 0 60px;
 }
 .m-nav-sis-site-link{
+    text-decoration: none;
+    color: #E87B2E;
     font-size: 25px;
 }
 
@@ -446,11 +473,11 @@ header{
 /*Media sizes*/
 /*smaller desktop*/
 @media only screen and (max-width: 1280px){
-    .lnav-left li a{
+    .lnav-left li, .lnav-left a{
         font-size: 12px;
         padding-top:8px;
     }
-    .lnav-right li a{
+    .lnav-right li, .lnav-right a{
         font-size: 12px;
         padding-top:8px;
     }
@@ -493,8 +520,11 @@ header{
         text-align: left;
         width: calc(30vw/2);
     }
-    .lnav-right li, .lnav-right a {
+    .lnav-right li, .lnav-right  a {
         padding: 0 10px;
+    }
+    .lnav-right li, .lnav-right a{
+        padding: 4px 10px;
     }
 }
 /*tablet*/

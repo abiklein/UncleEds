@@ -26,36 +26,106 @@
     <!--Satisfy-->
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
 
+    <!--JavaScript-->
+    <script>
+        function cardDisplay(clickID) {
+            let cardID = "c-" + clickID;
+            document.getElementById("ingredient-cards").style.display = "block";
+            document.getElementById(cardID).style.display = "block";
+        }
+        function cardHide() {
+            document.getElementById("ingredient-cards").style.display = "none";
+            let divs = document.getElementsByClassName("card");
+            for(let i = 0; i < divs.length; i++) {
+                divs[i].style.display="none";
+            }
+        }
+
+        function mobileOpen(clickID) {
+            let descriptionID = clickID + "-o";
+            let minusBtn = clickID + "-minus";
+            if(document.getElementById(clickID).style.height === "76px"){
+                document.getElementById(clickID).style.height = "75px";
+                document.getElementById(descriptionID).style.display = "none";
+                document.getElementById(minusBtn).style.display = "none";
+            }
+            else{
+                document.getElementById(clickID).style.height = "76px";
+                document.getElementById(minusBtn).style.display = "block";
+                setTimeout(function (){
+                    document.getElementById(descriptionID).style.display = "block";
+                }, 150);
+            }
+        }
+        function mobileNavOpen() {
+            let dropdown = document.getElementById("m-dropout");
+            let closeIcon = document.getElementById("m-h-btn-close");
+            let openIcon = document.getElementById("m-h-btn-open");
+
+            if (openIcon.style.display === "none") {
+                openIcon.style.display = "block";
+                closeIcon.style.display = "none";
+                dropdown.style.right = "100%";
+                dropdown.style.transition = " 0.5s";
+                dropdown.style.transitionTimingFunction = "ease-in-out";
+            } else {
+                openIcon.style.display = "none";
+                closeIcon.style.display = "block";
+                dropdown.style.right = "0";
+                dropdown.style.transition = " 0.5s";
+                dropdown.style.transitionTimingFunction = "ease-in-out";
+            }
+        }
+    </script>
+
 </head>
 <body>
 <header class="mobile">
     <nav class="mobilenav">
-        <div class="notifications"></div>
-        <div class="navigation-links">
-            <div class="lnav-left">
-                <a class="lnav-l-link" href="index.html">
-                    <div class="lnav-l-imgbox">
-                        <!--either img or svg tag, preferrably svg-->
+        <div class="m-navigation-links">
+            <div class="m-dropout" id="m-dropout">
+                <div class="m-d-links">
+                    <a class="m-d-link" id="m-nav-index" href="index.html"><div class="m-d-clickable">Home</div></a>
+                    <a class="m-d-link" id="m-nav-wtb" href="wtb.html"><div class="m-d-clickable">Where to Buy</div></a>
+                    <a class="m-d-link" id="m-nav-info" href="sauce.html"><div class="m-d-clickable">Sauce Info</div></a>
+                    <a class="m-d-link" id="m-nav--recipe" href="recipes.html"><div class="m-d-clickable">Recipe Book</div></a>
+                    <a class="m-d-link" id="m-nav-history" href="history.html"><div class="m-d-clickable">History</div></a>
+                    <a class="m-d-link" id="m-nav-contact" href="contact.html"><div class="m-d-clickable">Contact</div></a>
+                </div>
+                <div class="m-nav-sis-site"><a class="m-nav-sis-site-link" href="boats.html">INTERESTED IN WATERCRAFT AND PIER RENTAL SERVICES? <br/><b>CLICK HERE!</b></a></div>
+            </div>
+            <div class="m-hamburger">
+                <a href="#" role="button" class="m-h-btns" id="m-h-btn">
+                    <div class="m-nav-c-imgbox m-h-btns">
+                        <div class="m-h-btn" id="m-h-btn-open" onclick="mobileNavOpen()">
+                            ~ <br/>
+                            ~ <br/>
+                            ~
+                        </div>
+                        <div class="m-h-btn" id="m-h-btn-close" onclick="mobileNavOpen()">
+                            X
+                        </div>
                     </div>
                 </a>
             </div>
-            <div class="lnav-right">
-                <ul role="menubar" class="lnav-r-menubar">
-                    <li role="none" class="lnav-rlist-item">
-                        <div role="menuitem" class="lnav-r-item">
-                            <a class="lnav-r-link" href="" ></a>
-                        </div>
-                    </li>
-                </ul>
+            <div class="m-nav-c-img">
+                <a href="index.html">
+                    <div class="m-nav-c-imgbox">
+                        <img alt="Uncle Ed's Logo" src="media/footer/logo.png">
+                    </div>
+                </a>
+            </div>
+            <div class="m-hamburger m-cart">
             </div>
         </div>
+
     </nav>
 </header>
 <header class="desktop">
-    <a></a>
     <nav class="mastnav">
+        <a class="lnav-l-link" href="index.html"><img id="lnav-l-link-img" alt="Uncle Ed's Logo" src="media/footer/logo.png"></a>
         <div class="master-navbar">
-            <a class="master-links" href="index.html">
+            <a class="master-links" id="bbq-home" href="index.html">
                 <div class="m-l-container">
                     <img src="media/nav/master-bbq.png" alt="Uncle Ed's BBQ Grill Direct Image">
                 </div>
@@ -105,22 +175,26 @@
                         <h5>BOAT RENTALS</h5>
                         <h6>ONGOING FROM SPRING TO FALL SEASONS</h6>
                         <p>Rent pontoons, wave runners, pedal boards, and more on beautiful Powers Lake, WI (only <span class="importance">10 min</span> away from Lake Geneva)!</p>
-                        <div class="flex-btns"><a class="n-b-db-content-btn">WATERCRAFT AND PIER RENTAL SERVICES</a></div>
+                        <div class="flex-btns"><div class="n-b-db-content-btn-water"><a href="boats.html">WATERCRAFT AND PIER RENTAL SERVICES</a></div></div>
                     </div>
                     <div class="n-b-db-content" id="n-b-db-cfair">
                         <h5>RACINE COUNTY FAIR</h5>
-                        <h6>TBD</h6>
+                        <h6>WED JULY 24 - SUN JULY 28, 2024</h6>
                         <p>The Racine County Fair is our next upcoming event!</p>
                         <div class="flex-btns">
-                            <a href="https://www.racinecountyfair.com/" class="n-b-db-content-btn" id="n-b-db-fair">RCF CITE</a>
-                            <a href="events.html" class="n-b-db-content-btn" id="n-b-db-more">MORE OF OUR EVENTS</a>
+                            <div class="n-b-db-content-btn"><a href="https://www.racinecountyfair.com/" class="n-b-db-fair">RCF CITE</a></div>
+                            <div class="n-b-db-content-btn n-b-db-more"><a href="events.html" >MORE EVENTS</a></div>
                         </div>
                     </div>
                     <div class="n-b-db-content">
-                        <h5></h5>
+                        <h5>SAVE THE DATE!</h5>
                         <h6></h6>
-                        <p></p>
-                        <div class="flex-btns"><a class="n-b-db-content-btn"></a></div>
+                        <p>Save all the events we cater to your calendar! Click the buttons below to either save our
+                            event calendar to yours or go to our event page.</p>
+                        <div class="flex-btns">
+                            <div class="n-b-db-content-btn"><a class="n-b-db-content-btn n-b-db-fair" target="_blank" href="https://calendar.google.com/calendar/u/5?cid=MzZkOTBmOWUyMTRmMDUzNmE0NjQ4NTczZTA0NWQ2M2FkODg5YThhZTczYmU1YzhlMDEyMzBlMzZhNGVhOTFhNUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t">ADD CALENDAR</a></div>
+                            <div class="n-b-db-content-btn n-b-db-more"><a href="events.html" class="n-b-db-content-btn" >MORE EVENTS</a></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -130,7 +204,7 @@
                 <ul role="menubar" class="lnav-l-menubar">
                     <li role="none" class="lnav-llist-item">
                         <div role="menuitem" class="lnav-l-item">
-                            <a class="lnav-l-link" href="index.html">UNCLE ED'S BBQ GRILL</a>
+
                         </div>
                     </li>
                 </ul>
