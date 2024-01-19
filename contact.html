@@ -56,7 +56,25 @@
                     document.getElementById(descriptionID).style.display = "block";
                 }, 150);
             }
+        }
+        function mobileNavOpen() {
+            let dropdown = document.getElementById("m-dropout");
+            let closeIcon = document.getElementById("m-h-btn-close");
+            let openIcon = document.getElementById("m-h-btn-open");
 
+            if (openIcon.style.display === "none") {
+                openIcon.style.display = "block";
+                closeIcon.style.display = "none";
+                dropdown.style.right = "100%";
+                dropdown.style.transition = " 0.5s";
+                dropdown.style.transitionTimingFunction = "ease-in-out";
+            } else {
+                openIcon.style.display = "none";
+                closeIcon.style.display = "block";
+                dropdown.style.right = "0";
+                dropdown.style.transition = " 0.5s";
+                dropdown.style.transitionTimingFunction = "ease-in-out";
+            }
         }
     </script>
 
@@ -64,29 +82,46 @@
 <body>
 <header class="mobile">
     <nav class="mobilenav">
-        <div class="notifications"></div>
-        <div class="navigation-links">
-            <div class="lnav-left">
-                <a class="lnav-l-link" href="index.html">
-                    <div class="lnav-l-imgbox">
-                        <!--either img or svg tag, preferrably svg-->
-                    </div>
-                </a>
+        <div class="m-navigation-links">
+            <div class="m-dropout" id="m-dropout">
+                <div class="m-d-links">
+                    <a class="m-d-link" id="m-nav-index" href="index.html"><div class="m-d-clickable">Home</div></a>
+                    <a class="m-d-link" id="m-nav-wtb" href="wtb.html"><div class="m-d-clickable">Where to Buy</div></a>
+                    <a class="m-d-link" id="m-nav-info" href="sauce.html"><div class="m-d-clickable">Sauce Info</div></a>
+                    <a class="m-d-link" id="m-nav--recipe" href="recipes.html"><div class="m-d-clickable">Recipe Book</div></a>
+                    <a class="m-d-link" id="m-nav-history" href="history.html"><div class="m-d-clickable">History</div></a>
+                    <a class="m-d-link" id="m-nav-contact" href="contact.html"><div class="m-d-clickable">Contact</div></a>
+                </div>
+                <div class="m-nav-sis-site"><a class="m-nav-sis-site-link" href="boats.html">INTERESTED IN WATERCRAFT AND PIER RENTAL SERVICES? <br/><b>CLICK HERE!</b></a></div>
             </div>
-            <div class="lnav-right">
-                <ul role="menubar" class="lnav-r-menubar">
-                    <li role="none" class="lnav-rlist-item">
-                        <div role="menuitem" class="lnav-r-item">
-                            <a class="lnav-r-link" href="" ></a>
+                <div class="m-hamburger">
+                    <a href="#" role="button" class="m-h-btns" id="m-h-btn">
+                        <div class="m-nav-c-imgbox m-h-btns">
+                            <div class="m-h-btn" id="m-h-btn-open" onclick="mobileNavOpen()">
+                                ~ <br/>
+                                ~ <br/>
+                                ~
+                            </div>
+                            <div class="m-h-btn" id="m-h-btn-close" onclick="mobileNavOpen()">
+                                X
+                            </div>
                         </div>
-                    </li>
-                </ul>
+                    </a>
+                </div>
+                <div class="m-nav-c-img">
+                    <a href="index.html">
+                        <div class="m-nav-c-imgbox">
+                            <img alt="Uncle Ed's Logo" src="media/footer/logo.png">
+                        </div>
+                    </a>
+                </div>
+            <div class="m-hamburger m-cart">
             </div>
         </div>
+
     </nav>
 </header>
 <header class="desktop">
-    <a></a>
     <nav class="mastnav">
         <div class="master-navbar">
             <a class="master-links" href="index.html">
@@ -307,7 +342,7 @@
                     <ul class="c-s-list">
                         <li class="c-s-l-item" id="email"><span class="normText">&ensp;iamribman@gmail.com</span></li>
                         <li class="c-s-l-item" id="phone"><span class="normText">&ensp;(262) 295 - 5253</span></li>
-                        <li class="c-s-l-item" id="fb"><span class="normText">&ensp;See our page on Facebook!</span></li>
+                        <li class="c-s-l-item" id="fb"><a class="normText" target="_blank" href="https://www.facebook.com/PowersLake">&ensp;See our page on Facebook!</a></li>
                     </ul>
                 </div>
             </div>
@@ -336,7 +371,7 @@
                     <ul class="c-s-list">
                         <li class="c-s-l-item" id="m-email"><span class="normText">&ensp;iamribman@gmail.com</span></li>
                         <li class="c-s-l-item" id="m-phone"><span class="normText">&ensp;(262) 295 - 5253</span></li>
-                        <li class="c-s-l-item" id="m-fb"><a class="normText" >&ensp;See our page on Facebook!</a></li>
+                        <li class="c-s-l-item" id="m-fb"><a class="normText" target="_blank" href="https://www.facebook.com/PowersLake">&ensp;See our page on Facebook!</a></li>
                     </ul>
                 </div>
             </a>
