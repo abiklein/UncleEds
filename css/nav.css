@@ -190,20 +190,20 @@ header{
     max-width: 1280px;
     max-height: 200px;
     justify-content: center;
-    gap: 5vw;
+    gap: 10vw;
     margin: 0 100px 0 40px;
     padding:  0;
     position: absolute;
     bottom: 0;
 }
 .n-b-db-content{
-    min-width:25vw;
+    min-width:20vw;
+    max-width: 30vw;
 }
-.n-b-db-content h5, h6, p, a{
+.n-b-db-content h5, .n-b-db-content h6, .n-b-db-content p, .n-b-db-content a{
     padding: 0;
     margin: 0;
     text-align: center;
-
 }
 .n-b-db-content p{
     text-align:left;
@@ -221,21 +221,25 @@ header{
     bottom: 210px;
 }
 .n-b-db-content h6{
-    text-align:left;
-    bottom: 175px;
+    text-align:center;
+    bottom: 185px;
 }
 .flex-btns{
     margin-top: 10px;
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 25vw;
     bottom: 50px;
     position: absolute;
     color: #E87B2E;
+    flex: 1;
+    min-width: 300px;
 }
 .n-b-db-content-btn{
     text-decoration: none;
     color: #E87B2E;
+    text-align: left;
+    width: 50%;
 }
 .n-b-db-content-btn:hover{
     text-decoration: underline;
@@ -245,13 +249,13 @@ header{
     text-decoration: none;
     color: #E87B2E;
 }
-#n-b-db-fair{
-    text-align: left;
-    width: calc(25vw/2);
+.n-b-db-content-btn-water{
+    width: 100%;
 }
-#n-b-db-more{
+
+.n-b-db-more{
     text-align: right;
-    width: calc(25vw/2);
+    align-self: flex-start;
 }
 
 /*local navigation bar (brown)*/
@@ -450,6 +454,24 @@ header{
         font-size: 12px;
         padding-top:8px;
     }
+    .n-b-db-flex{
+        margin: 0 200px 0 40px;
+        padding:  0;
+        position: absolute;
+        bottom: 0;
+    }
+    .n-b-db-content{
+        min-width:15vw;
+        max-width: 20vw;
+        margin-right: 60px;
+    }
+    .flex-btns{
+        min-width: 240px;
+    }
+    .n-b-db-content-btn-water a{
+        font-size: 13px;
+    }
+
 }
 
 @media only screen and (min-width: 1008px) and (max-width: 1280px){
