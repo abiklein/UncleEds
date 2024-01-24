@@ -341,7 +341,7 @@ header{
     letter-spacing: 1px;
 }
 .lnav-right li, .lnav-right a:hover{
-    text-decoration: underline;
+    text-decoration: none;
     color:#E87B2E;
     transition: 0.4s;
 }

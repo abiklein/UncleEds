@@ -123,9 +123,14 @@ footer li, footer *{
 }
 .madein-txt, .policies{
     padding-top: 35px;
-    line-height: 37px;
     font-weight: 200;
     letter-spacing: 1px;
+}
+.madein-txt{
+    line-height: 25px;
+}
+.policies{
+    line-height: 37px;
 }
 .contact-social-txt p{
     letter-spacing: 1px;

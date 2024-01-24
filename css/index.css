@@ -69,7 +69,7 @@ html{
      font-weight: 800;
  }
  small{
-     font-size: 12px;
+     font-size: 14px;
      letter-spacing: 1px;
  }
 main{
@@ -97,27 +97,30 @@ main{
      flex-direction: column;
      flex-wrap: nowrap;
 
+
+     min-width: 1008px;
      width: 100%;
      background-color: palegreen;
  }
  .d-sect-sinfo{
-     width: 100% !important;
+     width: 100%;
      height: 400px;
-     background-color: #574f4d;
 
      display: flex;
      flex-direction: row;
      color: white;
  }
- .d-sect-sinfo-txt{
+ .d-sect-txt{
      width: 50%;
-     height: 400px;
-     background-color: #d7c6be;
+     min-height: 400px;
+     min-width: 700px;
+     display: grid;
+     grid-template-areas: 'space text space';
  }
- .d-sect-sinfo-txt p{
+ .d-sect-txt p{
      text-align: left;
  }
- .d-sect-sinfo-txt h1{
+ .d-sect-txt h1{
      padding-top: 5px;
      font-family: 'Coustard', serif;
      color: #1B1616;
@@ -126,13 +129,38 @@ main{
      text-align: left;
      margin: 0;
  }
+ .txt-sect{
+     min-width: 300px;
+     max-width: 400px;
+     grid-area: text;
+     position: relative;
+     z-index: 20;
+ }
+ .d-sect-txt-info{
+     background-color: #332929;
+ }
+
  .d-sect-ingredpicture{
      width: 50%;
      height: 400px;
+     overflow: visible;
+     background-color: #E87B2E;
+
  }
- .d-sect-ingredpicture img{
-     height: 800px;
-     overflow-x: visible;
+ .d-sect-ingredpicture-pic{
+     position: relative;
+     width: 400px;
+     height: 1300px;
+     overflow: visible;
+     z-index: 0;
+ }
+ .d-sect-ingredpicture-pic img{
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     overflow: visible;
+
+
  }
  .d-sect-spacer{
      min-width: 0;
@@ -144,31 +172,65 @@ main{
  /*---------------------------------------------------------------*/
  /*recipe section*/
  .d-sect-recipes{
-     height: 400px;
-     width: 100% !important;
+     min-height: 400px;
+     height: 100%;
+     max-height: 800px;
+     width: 100%;
      background-color: white;
 
      display: flex;
      flex-direction: row;
  }
- .d-sect-recipes-txt{
-     width: 50%;
-     height: 400px;
+ .d-sect-txt-recipe{
+     background-color: #E87B2E;
  }
- .d-sect-recipes-txt *{
-
- }
- .d-sect-recipes-txt h1{
+ .d-sect-txt-recipe h1{
      font-family: 'Coustard', serif;
-     text-shadow: 2px 0 #DC4B00, -2px 0 #DC4B00, 0 3px #332929, 0 -2px #fff,
-     1px 1px #fff, -1px -1px #fff, 1px -1px black, -1px 1px black;
+     color: #1B1616;
+     text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+     1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+     text-align: left;
+     margin: 0;
+     font-size: 25px;
+ }
+ .d-sect-txt-recipe-pic{
+     width: 50%;
+     background-image: linear-gradient( #332929, #1B1616);
+     display: grid;
+     grid-template-areas: 'space text space';
  }
  .d-sect-recipepicture{
-     width: 50%;
-     height: 400px;
+     grid-area: text;
+     border-radius: 50%;
+     overflow: clip;
+     margin: 100px;
+ }
+ #rec-pic-small{
+     position: relative;
+     background-color: #E87B2E;
+     transform: rotateZ(30deg);
+     top: 0;
+     left: -50px;
+     width: 650px;
+     height: 600px;
+     z-index: 0;
+ }
+ #rec-pic-medium{
+     position: relative;
+     left: 350px;
+     top: 250px;
+     width: 350px;
+     height: 350px;
+     z-index: 2;
+ }
+ #rec-pic-large{
+     width: 500px;
+     height: 500px;
+     z-index: 1;
  }
  #recipe-img{
-
+     object-fit: cover;
+     width: 100%;
  }
 
  /*buttons*/
